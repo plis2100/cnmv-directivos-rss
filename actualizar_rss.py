@@ -3,6 +3,7 @@ import html
 import json
 import re
 import sys
+import time
 from datetime import datetime, timedelta, timezone
 from email.utils import format_datetime
 from pathlib import Path
@@ -14,10 +15,19 @@ import requests
 from bs4 import BeautifulSoup
 
 
+# ============================================================
+# CONFIGURACIÓN
+# ============================================================
+
 USUARIO_GITHUB = "plis2100"
 REPOSITORIO = "cnmv-directivos-rss"
 
-URL_CNMV = (
+URL_RESULTADOS = (
+    "https://api.cnmv.es/portal/consultas/"
+    "directivos-resultado"
+)
+
+URL_CONSULTA = (
     "https://www.cnmv.es/portal/consultas/"
     "directivos-consulta?lang=es"
 )
@@ -30,23 +40,32 @@ URL_RSS = (
 ARCHIVO_RSS = Path("feed.xml")
 ARCHIVO_HISTORIAL = Path("historial.json")
 
-DIAS_BUSQUEDA = 15
-MAXIMO_ENTRADAS = 500
+# En la primera ejecución recuperará el último año.
+DIAS_BUSQUEDA = 365
+
+MAXIMO_PAGINAS = 25
+MAXIMO_ENTRADAS = 1000
 
 ZONA_HORARIA = ZoneInfo("Europe/Madrid")
 
 CABECERAS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 Chrome/136.0 Safari/537.36"
+        "AppleWebKit/537.36 "
+        "Chrome/136.0 Safari/537.36"
     ),
     "Accept": (
         "text/html,application/xhtml+xml,"
         "application/xml;q=0.9,*/*;q=0.8"
     ),
-    "Accept-Language": "es-ES,es;q=0.9",
+    "Accept-Language": "es-ES,es;q=0.9,en;q=0.7",
+    "Referer": URL_CONSULTA,
 }
 
+
+# ============================================================
+# FUNCIONES AUXILIARES
+# ============================================================
 
 def limpiar(valor):
     if valor is None:
@@ -110,214 +129,198 @@ def fecha_rss(fecha):
     )
 
 
-def localizar_formulario(sopa):
-    formularios = sopa.find_all("form")
+# ============================================================
+# DESCARGA DIRECTA DE LA CNMV
+# ============================================================
 
-    for formulario in formularios:
-        texto = limpiar(
-            formulario.get_text(
-                " ",
-                strip=True,
-            )
-        ).lower()
-
-        if (
-            "fecha" in texto
-            or "notificación" in texto
-            or "declarante" in texto
-        ):
-            return formulario
-
-    if formularios:
-        return formularios[0]
-
-    return None
-
-
-def crear_datos_formulario(
-    formulario,
+def descargar_pagina(
+    sesion,
     fecha_desde,
     fecha_hasta,
+    pagina,
 ):
-    datos = {}
+    parametros = {
+        "fechaDesde": fecha_desde.strftime(
+            "%d/%m/%Y"
+        ),
+        "fechaHasta": fecha_hasta.strftime(
+            "%d/%m/%Y"
+        ),
+        "lang": "es",
+        "page": pagina,
+    }
 
-    for campo in formulario.find_all(
-        ["input", "select", "textarea"]
+    ultimo_error = None
+
+    for intento in range(1, 4):
+        try:
+            respuesta = sesion.get(
+                URL_RESULTADOS,
+                params=parametros,
+                timeout=(15, 60),
+            )
+
+            print(
+                f"Página {pagina}: "
+                f"HTTP {respuesta.status_code}"
+            )
+
+            respuesta.raise_for_status()
+
+            if not respuesta.text.strip():
+                raise RuntimeError(
+                    "La CNMV devolvió una página vacía."
+                )
+
+            return respuesta.text, respuesta.url
+
+        except (
+            requests.RequestException,
+            RuntimeError,
+        ) as error:
+            ultimo_error = error
+
+            print(
+                f"Intento {intento} fallido: "
+                f"{error}"
+            )
+
+            if intento < 3:
+                time.sleep(intento * 5)
+
+    raise RuntimeError(
+        f"No se pudo descargar la página "
+        f"{pagina}: {ultimo_error}"
+    )
+
+
+def obtener_numero_paginas(sopa):
+    numero_maximo = 1
+
+    texto_pagina = limpiar(
+        sopa.get_text(" ", strip=True)
+    )
+
+    coincidencias = re.findall(
+        r"Página\s+\d+\s+de\s+(\d+)",
+        texto_pagina,
+        flags=re.IGNORECASE,
+    )
+
+    coincidencias += re.findall(
+        r"Page\s+\d+\s+(?:of|out\s+of)\s+(\d+)",
+        texto_pagina,
+        flags=re.IGNORECASE,
+    )
+
+    for valor in coincidencias:
+        try:
+            numero_maximo = max(
+                numero_maximo,
+                int(valor),
+            )
+        except ValueError:
+            pass
+
+    for enlace in sopa.find_all(
+        "a",
+        href=True,
     ):
-        nombre = campo.get("name")
-
-        if not nombre:
-            continue
-
-        tipo = limpiar(
-            campo.get("type", "")
-        ).lower()
-
-        if tipo in {
-            "submit",
-            "button",
-            "image",
-            "file",
-            "reset",
-        }:
-            continue
-
-        datos[nombre] = campo.get(
-            "value",
-            "",
+        texto = limpiar(
+            enlace.get_text(" ", strip=True)
         )
 
-    desde = fecha_desde.strftime(
-        "%d/%m/%Y"
-    )
-
-    hasta = fecha_hasta.strftime(
-        "%d/%m/%Y"
-    )
-
-    tiene_desde = False
-    tiene_hasta = False
-
-    for campo in formulario.find_all(
-        ["input", "textarea"]
-    ):
-        nombre = campo.get("name")
-
-        if not nombre:
-            continue
-
-        pista = (
-            f"{nombre} "
-            f"{campo.get('id', '')} "
-            f"{campo.get('placeholder', '')}"
-        ).lower()
-
-        if any(
-            palabra in pista
-            for palabra in (
-                "desde",
-                "inicio",
-                "fechaini",
-                "fecha_ini",
-                "datefrom",
-                "fromdate",
+        if texto.isdigit():
+            numero_maximo = max(
+                numero_maximo,
+                int(texto),
             )
-        ):
-            datos[nombre] = desde
-            tiene_desde = True
 
-        elif any(
-            palabra in pista
-            for palabra in (
-                "hasta",
-                "fin",
-                "fechafin",
-                "fecha_fin",
-                "dateto",
-                "todate",
-            )
-        ):
-            datos[nombre] = hasta
-            tiene_hasta = True
-
-    if not tiene_desde:
-        datos["fechaDesde"] = desde
-
-    if not tiene_hasta:
-        datos["fechaHasta"] = hasta
-
-    boton = formulario.find(
-        ["button", "input"],
-        attrs={"type": "submit"},
+    return min(
+        numero_maximo,
+        MAXIMO_PAGINAS,
     )
 
-    if boton and boton.get("name"):
-        datos[boton["name"]] = (
-            boton.get("value")
-            or limpiar(boton.get_text())
-            or "Buscar"
-        )
 
-    return datos
-
-
-def consultar_cnmv():
+def descargar_resultados():
     sesion = requests.Session()
     sesion.headers.update(CABECERAS)
 
-    respuesta = sesion.get(
-        URL_CNMV,
-        timeout=(15, 60),
+    fecha_hasta = datetime.now(
+        ZONA_HORARIA
     )
 
-    respuesta.raise_for_status()
-
-    sopa = BeautifulSoup(
-        respuesta.text,
-        "html.parser",
-    )
-
-    formulario = localizar_formulario(sopa)
-
-    if formulario is None:
-        raise RuntimeError(
-            "No se encontró el formulario de la CNMV."
-        )
-
-    ahora = datetime.now(ZONA_HORARIA)
-
-    fecha_desde = ahora - timedelta(
+    fecha_desde = fecha_hasta - timedelta(
         days=DIAS_BUSQUEDA
     )
 
-    datos = crear_datos_formulario(
-        formulario,
-        fecha_desde,
-        ahora,
+    print(
+        "Consultando notificaciones desde "
+        f"{fecha_desde:%d/%m/%Y} hasta "
+        f"{fecha_hasta:%d/%m/%Y}"
     )
 
-    accion = formulario.get("action")
+    paginas = []
 
-    if accion:
-        url_consulta = urljoin(
-            respuesta.url,
-            accion,
-        )
-    else:
-        url_consulta = respuesta.url
+    contenido, url = descargar_pagina(
+        sesion,
+        fecha_desde,
+        fecha_hasta,
+        0,
+    )
 
-    metodo = limpiar(
-        formulario.get("method", "get")
-    ).lower()
+    paginas.append(
+        {
+            "contenido": contenido,
+            "url": url,
+        }
+    )
+
+    sopa = BeautifulSoup(
+        contenido,
+        "html.parser",
+    )
+
+    numero_paginas = obtener_numero_paginas(
+        sopa
+    )
 
     print(
-        f"Consultando desde "
-        f"{fecha_desde:%d/%m/%Y} hasta "
-        f"{ahora:%d/%m/%Y}"
+        f"Número de páginas detectado: "
+        f"{numero_paginas}"
     )
 
-    if metodo == "post":
-        resultado = sesion.post(
-            url_consulta,
-            data=datos,
-            timeout=(15, 60),
+    # La primera página ya se descargó con page=0.
+    for pagina in range(
+        1,
+        numero_paginas,
+    ):
+        contenido, url = descargar_pagina(
+            sesion,
+            fecha_desde,
+            fecha_hasta,
+            pagina,
         )
-    else:
-        resultado = sesion.get(
-            url_consulta,
-            params=datos,
-            timeout=(15, 60),
+
+        paginas.append(
+            {
+                "contenido": contenido,
+                "url": url,
+            }
         )
 
-    resultado.raise_for_status()
+    return paginas
 
-    return resultado.text, resultado.url
 
+# ============================================================
+# EXTRACCIÓN DE NOTIFICACIONES
+# ============================================================
 
 def encontrar_bloques(sopa):
-    patron_registro = re.compile(
-        r"Número\s+de\s+registro\s*:\s*"
-        r"([0-9]+)",
+    patron = re.compile(
+        r"(?:Número|N[uú]mero|Register)"
+        r"\s+(?:de\s+)?(?:registro|number)"
+        r"\s*:\s*([0-9]+)",
         re.IGNORECASE,
     )
 
@@ -325,7 +328,7 @@ def encontrar_bloques(sopa):
     vistos = set()
 
     for elemento in sopa.find_all(
-        ["li", "article", "div", "tr"]
+        ["li", "article", "tr", "div"]
     ):
         texto = limpiar(
             elemento.get_text(
@@ -334,34 +337,93 @@ def encontrar_bloques(sopa):
             )
         )
 
-        registros = patron_registro.findall(
-            texto
-        )
+        registros = patron.findall(texto)
 
-        # Seleccionamos únicamente elementos que
-        # contienen una sola notificación.
+        # El bloque correcto debe contener
+        # exactamente una notificación.
         if len(registros) != 1:
             continue
 
-        numero = registros[0]
+        registro = registros[0]
 
-        if numero in vistos:
+        if registro in vistos:
             continue
 
-        vistos.add(numero)
+        vistos.add(registro)
 
         bloques.append(
             {
                 "elemento": elemento,
                 "texto": texto,
-                "registro": numero,
+                "registro": registro,
             }
         )
 
     return bloques
 
 
-def obtener_empresa(texto, fecha_texto):
+def obtener_declarante(texto):
+    patrones = [
+        (
+            r"Declarante\s*:\s*(.+?)"
+            r"(?=Motivo\s+de\s+la\s+notificación"
+            r"|Número\s+de\s+registro|$)"
+        ),
+        (
+            r"Declarant\s*:\s*(.+?)"
+            r"(?=Reason\s+for\s+notification"
+            r"|Register\s+number|$)"
+        ),
+    ]
+
+    for patron in patrones:
+        coincidencia = re.search(
+            patron,
+            texto,
+            flags=re.IGNORECASE,
+        )
+
+        if coincidencia:
+            return limpiar(
+                coincidencia.group(1)
+            )
+
+    return "Declarante no identificado"
+
+
+def obtener_motivo(texto):
+    patrones = [
+        (
+            r"Motivo\s+de\s+la\s+notificación"
+            r"\s*:\s*(.+?)"
+            r"(?=Número\s+de\s+registro|$)"
+        ),
+        (
+            r"Reason\s+for\s+notification"
+            r"\s*:\s*(.+?)"
+            r"(?=Register\s+number|$)"
+        ),
+    ]
+
+    for patron in patrones:
+        coincidencia = re.search(
+            patron,
+            texto,
+            flags=re.IGNORECASE,
+        )
+
+        if coincidencia:
+            return limpiar(
+                coincidencia.group(1)
+            )
+
+    return ""
+
+
+def obtener_empresa(
+    texto,
+    fecha_texto,
+):
     resultado = texto
 
     if fecha_texto:
@@ -372,14 +434,14 @@ def obtener_empresa(texto, fecha_texto):
         )
 
     resultado = re.split(
-        r"Declarante\s*:",
+        r"Declarante\s*:|Declarant\s*:",
         resultado,
         maxsplit=1,
         flags=re.IGNORECASE,
     )[0]
 
     resultado = re.sub(
-        r"^[•\-–—\s]+",
+        r"^[•\-–—\s;]+",
         "",
         resultado,
     )
@@ -392,7 +454,40 @@ def obtener_empresa(texto, fecha_texto):
     )
 
 
-def extraer_notificaciones(
+def obtener_enlace(
+    elemento,
+    url_base,
+    registro,
+):
+    enlaces = elemento.find_all(
+        "a",
+        href=True,
+    )
+
+    for enlace in enlaces:
+        href = limpiar(
+            enlace.get("href")
+        )
+
+        if not href:
+            continue
+
+        if href.startswith(
+            ("javascript:", "#")
+        ):
+            continue
+
+        return urljoin(
+            url_base,
+            href,
+        )
+
+    # Si no hay enlace directo, se mantiene
+    # la página de resultados.
+    return url_base
+
+
+def extraer_notificaciones_pagina(
     contenido,
     url_base,
 ):
@@ -419,71 +514,26 @@ def extraer_notificaciones(
             else ""
         )
 
-        fecha = convertir_fecha(fecha_texto)
-
-        coincidencia_declarante = re.search(
-            r"Declarante\s*:\s*(.+?)"
-            r"(?=Motivo\s+de\s+la\s+notificación"
-            r"|Número\s+de\s+registro|$)",
-            texto,
-            re.IGNORECASE,
+        fecha = convertir_fecha(
+            fecha_texto
         )
 
-        if coincidencia_declarante:
-            declarante = limpiar(
-                coincidencia_declarante.group(1)
-            )
-        else:
-            declarante = (
-                "Declarante no identificado"
-            )
-
-        coincidencia_motivo = re.search(
-            r"Motivo\s+de\s+la\s+notificación"
-            r"\s*:\s*(.+?)"
-            r"(?=Número\s+de\s+registro|$)",
-            texto,
-            re.IGNORECASE,
+        declarante = obtener_declarante(
+            texto
         )
 
-        motivo = (
-            limpiar(
-                coincidencia_motivo.group(1)
-            )
-            if coincidencia_motivo
-            else ""
-        )
+        motivo = obtener_motivo(texto)
 
         empresa = obtener_empresa(
             texto,
             fecha_texto,
         )
 
-        enlace = ""
-
-        for etiqueta_enlace in elemento.find_all(
-            "a",
-            href=True,
-        ):
-            href = etiqueta_enlace.get("href", "")
-
-            if not href:
-                continue
-
-            if href.startswith(
-                ("javascript:", "#")
-            ):
-                continue
-
-            enlace = urljoin(
-                url_base,
-                href,
-            )
-
-            break
-
-        if not enlace:
-            enlace = url_base
+        enlace = obtener_enlace(
+            elemento,
+            url_base,
+            registro,
+        )
 
         titulo = (
             "CNMV DIRECTIVOS | "
@@ -523,14 +573,14 @@ def extraer_notificaciones(
         descripcion.append(
             (
                 f'<p><a href="{html.escape(enlace)}">'
-                "Abrir notificación en la CNMV"
+                "Abrir en la CNMV"
                 "</a></p>"
             )
         )
 
         identificador = hashlib.sha256(
             (
-                "cnmv-directivos-v1|"
+                "cnmv-directivos-v2|"
                 f"{registro}"
             ).encode("utf-8")
         ).hexdigest()
@@ -557,19 +607,57 @@ def extraer_notificaciones(
     return notificaciones
 
 
+def extraer_todas(paginas):
+    resultado = []
+    registros_vistos = set()
+
+    for numero, pagina in enumerate(
+        paginas,
+        start=1,
+    ):
+        encontradas = (
+            extraer_notificaciones_pagina(
+                pagina["contenido"],
+                pagina["url"],
+            )
+        )
+
+        print(
+            f"Página {numero}: "
+            f"{len(encontradas)} notificaciones"
+        )
+
+        for notificacion in encontradas:
+            registro = notificacion[
+                "registro"
+            ]
+
+            if registro in registros_vistos:
+                continue
+
+            registros_vistos.add(registro)
+            resultado.append(notificacion)
+
+    return resultado
+
+
+# ============================================================
+# HISTORIAL
+# ============================================================
+
 def cargar_historial():
     if not ARCHIVO_HISTORIAL.exists():
         return []
 
     try:
-        contenido = json.loads(
+        datos = json.loads(
             ARCHIVO_HISTORIAL.read_text(
                 encoding="utf-8"
             )
         )
 
-        if isinstance(contenido, list):
-            return contenido
+        if isinstance(datos, list):
+            return datos
 
     except (
         OSError,
@@ -583,7 +671,9 @@ def cargar_historial():
 def guardar_historial(notificaciones):
     ARCHIVO_HISTORIAL.write_text(
         json.dumps(
-            notificaciones[:MAXIMO_ENTRADAS],
+            notificaciones[
+                :MAXIMO_ENTRADAS
+            ],
             ensure_ascii=False,
             indent=2,
         ),
@@ -595,20 +685,26 @@ def mezclar_notificaciones(
     nuevas,
     anteriores,
 ):
-    por_id = {}
+    por_registro = {}
 
     for notificacion in anteriores:
-        identificador = notificacion.get("id")
+        registro = notificacion.get(
+            "registro"
+        )
 
-        if identificador:
-            por_id[identificador] = notificacion
+        if registro:
+            por_registro[registro] = (
+                notificacion
+            )
 
     for notificacion in nuevas:
-        por_id[
-            notificacion["id"]
+        por_registro[
+            notificacion["registro"]
         ] = notificacion
 
-    resultado = list(por_id.values())
+    resultado = list(
+        por_registro.values()
+    )
 
     resultado.sort(
         key=lambda elemento: elemento.get(
@@ -620,6 +716,10 @@ def mezclar_notificaciones(
 
     return resultado[:MAXIMO_ENTRADAS]
 
+
+# ============================================================
+# CREACIÓN DEL RSS
+# ============================================================
 
 def crear_rss(notificaciones):
     ET.register_namespace(
@@ -647,7 +747,7 @@ def crear_rss(notificaciones):
     ET.SubElement(
         canal,
         "link",
-    ).text = URL_CNMV
+    ).text = URL_CONSULTA
 
     ET.SubElement(
         canal,
@@ -737,24 +837,27 @@ def crear_rss(notificaciones):
         xml_declaration=True,
     )
 
-    # Verifica que el RSS no esté dañado.
+    # Verifica que el XML creado sea válido.
     ET.parse(ARCHIVO_RSS)
 
+    print(
+        f"feed.xml generado: "
+        f"{ARCHIVO_RSS.stat().st_size} bytes"
+    )
+
+
+# ============================================================
+# PROGRAMA PRINCIPAL
+# ============================================================
 
 def main():
-    print(
-        "Consultando notificaciones "
-        "de directivos de la CNMV..."
-    )
+    print("========================================")
+    print("NOTIFICACIONES DE DIRECTIVOS CNMV")
+    print("========================================")
 
-    contenido, url_resultados = (
-        consultar_cnmv()
-    )
+    paginas = descargar_resultados()
 
-    nuevas = extraer_notificaciones(
-        contenido,
-        url_resultados,
-    )
+    nuevas = extraer_todas(paginas)
 
     anteriores = cargar_historial()
 
@@ -766,22 +869,22 @@ def main():
     guardar_historial(resultado)
     crear_rss(resultado)
 
+    print("")
     print("Proceso finalizado correctamente.")
     print(
         f"Notificaciones encontradas: "
         f"{len(nuevas)}"
     )
     print(
-        f"Entradas guardadas: "
+        f"Entradas guardadas en RSS: "
         f"{len(resultado)}"
     )
     print(f"URL para Feedly: {URL_RSS}")
 
     if not nuevas:
         print(
-            "AVISO: la consulta ha funcionado, "
-            "pero no encontró notificaciones "
-            "en el periodo consultado."
+            "AVISO: la CNMV respondió, pero "
+            "no se extrajo ninguna notificación."
         )
 
 
