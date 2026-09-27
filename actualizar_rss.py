@@ -23,13 +23,13 @@ USUARIO_GITHUB = "plis2100"
 REPOSITORIO = "cnmv-directivos-rss"
 
 URL_RESULTADOS = (
-    "https://api.cnmv.es/portal/consultas/"
-    "directivos-resultado"
+    "https://www.cnmv.es/portal/Consultas/"
+    "Directivos-Resultado"
 )
 
 URL_CONSULTA = (
-    "https://www.cnmv.es/portal/consultas/"
-    "directivos-consulta?lang=es"
+    "https://www.cnmv.es/portal/Consultas/"
+    "Directivos-Consulta"
 )
 
 URL_RSS = (
@@ -40,10 +40,12 @@ URL_RSS = (
 ARCHIVO_RSS = Path("feed.xml")
 ARCHIVO_HISTORIAL = Path("historial.json")
 
-# En la primera ejecución recuperará el último año.
-DIAS_BUSQUEDA = 365
+# Primera ejecución: últimos 60 días.
+DIAS_PRIMERA_EJECUCION = 60
 
-MAXIMO_PAGINAS = 25
+# Ejecuciones posteriores: últimos 7 días.
+DIAS_EJECUCIONES_POSTERIORES = 7
+
 MAXIMO_ENTRADAS = 1000
 
 ZONA_HORARIA = ZoneInfo("Europe/Madrid")
@@ -58,7 +60,7 @@ CABECERAS = {
         "text/html,application/xhtml+xml,"
         "application/xml;q=0.9,*/*;q=0.8"
     ),
-    "Accept-Language": "es-ES,es;q=0.9,en;q=0.7",
+    "Accept-Language": "es-ES,es;q=0.9",
     "Referer": URL_CONSULTA,
 }
 
@@ -130,24 +132,15 @@ def fecha_rss(fecha):
 
 
 # ============================================================
-# DESCARGA DIRECTA DE LA CNMV
+# DESCARGA DE LA CNMV
 # ============================================================
 
-def descargar_pagina(
-    sesion,
-    fecha_desde,
-    fecha_hasta,
-    pagina,
-):
+def descargar_dia(sesion, fecha):
+    fecha_texto = fecha.strftime("%d/%m/%Y")
+
     parametros = {
-        "fechaDesde": fecha_desde.strftime(
-            "%d/%m/%Y"
-        ),
-        "fechaHasta": fecha_hasta.strftime(
-            "%d/%m/%Y"
-        ),
+        "fechad": fecha_texto,
         "lang": "es",
-        "page": pagina,
     }
 
     ultimo_error = None
@@ -161,7 +154,7 @@ def descargar_pagina(
             )
 
             print(
-                f"Página {pagina}: "
+                f"{fecha_texto}: "
                 f"HTTP {respuesta.status_code}"
             )
 
@@ -181,133 +174,63 @@ def descargar_pagina(
             ultimo_error = error
 
             print(
-                f"Intento {intento} fallido: "
-                f"{error}"
+                f"Intento {intento} fallido "
+                f"para {fecha_texto}: {error}"
             )
 
             if intento < 3:
-                time.sleep(intento * 5)
+                time.sleep(intento * 3)
 
-    raise RuntimeError(
-        f"No se pudo descargar la página "
-        f"{pagina}: {ultimo_error}"
+    print(
+        f"No se pudo descargar {fecha_texto}: "
+        f"{ultimo_error}"
     )
 
-
-def obtener_numero_paginas(sopa):
-    numero_maximo = 1
-
-    texto_pagina = limpiar(
-        sopa.get_text(" ", strip=True)
-    )
-
-    coincidencias = re.findall(
-        r"Página\s+\d+\s+de\s+(\d+)",
-        texto_pagina,
-        flags=re.IGNORECASE,
-    )
-
-    coincidencias += re.findall(
-        r"Page\s+\d+\s+(?:of|out\s+of)\s+(\d+)",
-        texto_pagina,
-        flags=re.IGNORECASE,
-    )
-
-    for valor in coincidencias:
-        try:
-            numero_maximo = max(
-                numero_maximo,
-                int(valor),
-            )
-        except ValueError:
-            pass
-
-    for enlace in sopa.find_all(
-        "a",
-        href=True,
-    ):
-        texto = limpiar(
-            enlace.get_text(" ", strip=True)
-        )
-
-        if texto.isdigit():
-            numero_maximo = max(
-                numero_maximo,
-                int(texto),
-            )
-
-    return min(
-        numero_maximo,
-        MAXIMO_PAGINAS,
-    )
+    return "", ""
 
 
 def descargar_resultados():
     sesion = requests.Session()
     sesion.headers.update(CABECERAS)
 
-    fecha_hasta = datetime.now(
-        ZONA_HORARIA
+    primera_ejecucion = (
+        not ARCHIVO_HISTORIAL.exists()
     )
 
-    fecha_desde = fecha_hasta - timedelta(
-        days=DIAS_BUSQUEDA
-    )
+    if primera_ejecucion:
+        dias = DIAS_PRIMERA_EJECUCION
+    else:
+        dias = DIAS_EJECUCIONES_POSTERIORES
+
+    hoy = datetime.now(ZONA_HORARIA)
 
     print(
-        "Consultando notificaciones desde "
-        f"{fecha_desde:%d/%m/%Y} hasta "
-        f"{fecha_hasta:%d/%m/%Y}"
+        f"Consultando los últimos {dias} días."
     )
 
     paginas = []
 
-    contenido, url = descargar_pagina(
-        sesion,
-        fecha_desde,
-        fecha_hasta,
-        0,
-    )
+    for desplazamiento in range(dias):
+        fecha = hoy - timedelta(
+            days=desplazamiento
+        )
 
-    paginas.append(
-        {
-            "contenido": contenido,
-            "url": url,
-        }
-    )
-
-    sopa = BeautifulSoup(
-        contenido,
-        "html.parser",
-    )
-
-    numero_paginas = obtener_numero_paginas(
-        sopa
-    )
-
-    print(
-        f"Número de páginas detectado: "
-        f"{numero_paginas}"
-    )
-
-    # La primera página ya se descargó con page=0.
-    for pagina in range(
-        1,
-        numero_paginas,
-    ):
-        contenido, url = descargar_pagina(
+        contenido, url = descargar_dia(
             sesion,
-            fecha_desde,
-            fecha_hasta,
-            pagina,
+            fecha,
         )
 
-        paginas.append(
-            {
-                "contenido": contenido,
-                "url": url,
-            }
-        )
+        if contenido:
+            paginas.append(
+                {
+                    "fecha": fecha,
+                    "contenido": contenido,
+                    "url": url,
+                }
+            )
+
+        # Evita enviar demasiadas solicitudes seguidas.
+        time.sleep(0.25)
 
     return paginas
 
@@ -316,19 +239,23 @@ def descargar_resultados():
 # EXTRACCIÓN DE NOTIFICACIONES
 # ============================================================
 
-def encontrar_bloques(sopa):
-    patron = re.compile(
-        r"(?:Número|N[uú]mero|Register)"
-        r"\s+(?:de\s+)?(?:registro|number)"
+def patron_registro():
+    return re.compile(
+        r"(?:Número|N[uú]mero)\s+de\s+registro"
         r"\s*:\s*([0-9]+)",
         re.IGNORECASE,
     )
 
+
+def encontrar_bloques(sopa):
+    patron = patron_registro()
     bloques = []
     vistos = set()
 
+    # En la página de la CNMV las notificaciones
+    # suelen estar contenidas en elementos li o div.
     for elemento in sopa.find_all(
-        ["li", "article", "tr", "div"]
+        ["li", "article", "section", "tr", "div"]
     ):
         texto = limpiar(
             elemento.get_text(
@@ -339,14 +266,22 @@ def encontrar_bloques(sopa):
 
         registros = patron.findall(texto)
 
-        # El bloque correcto debe contener
-        # exactamente una notificación.
+        # El contenedor exacto de una notificación
+        # debe tener un único número de registro.
         if len(registros) != 1:
             continue
 
         registro = registros[0]
 
         if registro in vistos:
+            continue
+
+        # Debe contener también un declarante.
+        if not re.search(
+            r"Declarante\s*:",
+            texto,
+            flags=re.IGNORECASE,
+        ):
             continue
 
         vistos.add(registro)
@@ -363,59 +298,35 @@ def encontrar_bloques(sopa):
 
 
 def obtener_declarante(texto):
-    patrones = [
-        (
-            r"Declarante\s*:\s*(.+?)"
-            r"(?=Motivo\s+de\s+la\s+notificación"
-            r"|Número\s+de\s+registro|$)"
-        ),
-        (
-            r"Declarant\s*:\s*(.+?)"
-            r"(?=Reason\s+for\s+notification"
-            r"|Register\s+number|$)"
-        ),
-    ]
+    coincidencia = re.search(
+        r"Declarante\s*:\s*(.+?)"
+        r"(?=Motivo\s+de\s+la\s+notificación"
+        r"|Número\s+de\s+registro|$)",
+        texto,
+        flags=re.IGNORECASE,
+    )
 
-    for patron in patrones:
-        coincidencia = re.search(
-            patron,
-            texto,
-            flags=re.IGNORECASE,
+    if coincidencia:
+        return limpiar(
+            coincidencia.group(1)
         )
-
-        if coincidencia:
-            return limpiar(
-                coincidencia.group(1)
-            )
 
     return "Declarante no identificado"
 
 
 def obtener_motivo(texto):
-    patrones = [
-        (
-            r"Motivo\s+de\s+la\s+notificación"
-            r"\s*:\s*(.+?)"
-            r"(?=Número\s+de\s+registro|$)"
-        ),
-        (
-            r"Reason\s+for\s+notification"
-            r"\s*:\s*(.+?)"
-            r"(?=Register\s+number|$)"
-        ),
-    ]
+    coincidencia = re.search(
+        r"Motivo\s+de\s+la\s+notificación"
+        r"\s*:\s*(.+?)"
+        r"(?=Número\s+de\s+registro|$)",
+        texto,
+        flags=re.IGNORECASE,
+    )
 
-    for patron in patrones:
-        coincidencia = re.search(
-            patron,
-            texto,
-            flags=re.IGNORECASE,
+    if coincidencia:
+        return limpiar(
+            coincidencia.group(1)
         )
-
-        if coincidencia:
-            return limpiar(
-                coincidencia.group(1)
-            )
 
     return ""
 
@@ -434,7 +345,7 @@ def obtener_empresa(
         )
 
     resultado = re.split(
-        r"Declarante\s*:|Declarant\s*:",
+        r"Declarante\s*:",
         resultado,
         maxsplit=1,
         flags=re.IGNORECASE,
@@ -454,17 +365,11 @@ def obtener_empresa(
     )
 
 
-def obtener_enlace(
-    elemento,
-    url_base,
-    registro,
-):
-    enlaces = elemento.find_all(
+def obtener_enlace(elemento, url_base):
+    for enlace in elemento.find_all(
         "a",
         href=True,
-    )
-
-    for enlace in enlaces:
+    ):
         href = limpiar(
             enlace.get("href")
         )
@@ -482,126 +387,131 @@ def obtener_enlace(
             href,
         )
 
-    # Si no hay enlace directo, se mantiene
-    # la página de resultados.
     return url_base
 
 
-def extraer_notificaciones_pagina(
-    contenido,
+def crear_notificacion(
+    elemento,
+    texto,
+    registro,
     url_base,
+    fecha_consultada,
 ):
-    sopa = BeautifulSoup(
-        contenido,
-        "html.parser",
+    coincidencia_fecha = re.search(
+        r"\b\d{2}/\d{2}/\d{4}\b",
+        texto,
     )
 
-    notificaciones = []
-
-    for bloque in encontrar_bloques(sopa):
-        elemento = bloque["elemento"]
-        texto = bloque["texto"]
-        registro = bloque["registro"]
-
-        coincidencia_fecha = re.search(
-            r"\b\d{2}/\d{2}/\d{4}\b",
-            texto,
-        )
-
+    if coincidencia_fecha:
         fecha_texto = (
             coincidencia_fecha.group(0)
-            if coincidencia_fecha
-            else ""
         )
 
         fecha = convertir_fecha(
             fecha_texto
         )
-
-        declarante = obtener_declarante(
-            texto
+    else:
+        fecha = fecha_consultada
+        fecha_texto = fecha.strftime(
+            "%d/%m/%Y"
         )
 
-        motivo = obtener_motivo(texto)
+    declarante = obtener_declarante(texto)
+    motivo = obtener_motivo(texto)
 
-        empresa = obtener_empresa(
-            texto,
-            fecha_texto,
-        )
+    empresa = obtener_empresa(
+        texto,
+        fecha_texto,
+    )
 
-        enlace = obtener_enlace(
-            elemento,
-            url_base,
-            registro,
-        )
+    enlace = obtener_enlace(
+        elemento,
+        url_base,
+    )
 
-        titulo = (
-            "CNMV DIRECTIVOS | "
-            f"{fecha_texto or 'SIN FECHA'} | "
-            f"{empresa} | "
-            f"{declarante}"
-        )
+    titulo = (
+        "CNMV DIRECTIVOS | "
+        f"{fecha_texto} | "
+        f"{empresa} | "
+        f"{declarante}"
+    )
 
-        descripcion = [
-            (
-                "<p><strong>Empresa:</strong> "
-                f"{html.escape(empresa)}</p>"
-            ),
-            (
-                "<p><strong>Declarante:</strong> "
-                f"{html.escape(declarante)}</p>"
-            ),
-            (
-                "<p><strong>Fecha:</strong> "
-                f"{html.escape(fecha_texto)}</p>"
-            ),
-            (
-                "<p><strong>Número de registro:"
-                "</strong> "
-                f"{html.escape(registro)}</p>"
-            ),
-        ]
+    descripcion = [
+        (
+            "<p><strong>Empresa:</strong> "
+            f"{html.escape(empresa)}</p>"
+        ),
+        (
+            "<p><strong>Declarante:</strong> "
+            f"{html.escape(declarante)}</p>"
+        ),
+        (
+            "<p><strong>Fecha:</strong> "
+            f"{html.escape(fecha_texto)}</p>"
+        ),
+        (
+            "<p><strong>Número de registro:"
+            "</strong> "
+            f"{html.escape(registro)}</p>"
+        ),
+    ]
 
-        if motivo:
-            descripcion.append(
-                (
-                    "<p><strong>Motivo:</strong> "
-                    f"{html.escape(motivo)}</p>"
-                )
-            )
-
+    if motivo:
         descripcion.append(
             (
-                f'<p><a href="{html.escape(enlace)}">'
-                "Abrir en la CNMV"
-                "</a></p>"
+                "<p><strong>Motivo:</strong> "
+                f"{html.escape(motivo)}</p>"
             )
         )
 
-        identificador = hashlib.sha256(
-            (
-                "cnmv-directivos-v2|"
-                f"{registro}"
-            ).encode("utf-8")
-        ).hexdigest()
+    descripcion.append(
+        (
+            f'<p><a href="{html.escape(enlace)}">'
+            "Abrir notificación en la CNMV"
+            "</a></p>"
+        )
+    )
+
+    identificador = hashlib.sha256(
+        (
+            "cnmv-directivos-v3|"
+            f"{registro}"
+        ).encode("utf-8")
+    ).hexdigest()
+
+    return {
+        "id": identificador,
+        "registro": registro,
+        "titulo": titulo,
+        "url": enlace,
+        "descripcion": "".join(
+            descripcion
+        ),
+        "fecha": fecha.isoformat(),
+    }
+
+
+def extraer_pagina(pagina):
+    sopa = BeautifulSoup(
+        pagina["contenido"],
+        "html.parser",
+    )
+
+    notificaciones = []
+
+    bloques = encontrar_bloques(sopa)
+
+    for bloque in bloques:
+        notificacion = crear_notificacion(
+            bloque["elemento"],
+            bloque["texto"],
+            bloque["registro"],
+            pagina["url"],
+            pagina["fecha"],
+        )
 
         notificaciones.append(
-            {
-                "id": identificador,
-                "registro": registro,
-                "titulo": titulo,
-                "url": enlace,
-                "descripcion": "".join(
-                    descripcion
-                ),
-                "fecha": (
-                    fecha.isoformat()
-                    if fecha
-                    else datetime.now(
-                        timezone.utc
-                    ).isoformat()
-                ),
-            }
+            notificacion
         )
 
     return notificaciones
@@ -611,20 +521,19 @@ def extraer_todas(paginas):
     resultado = []
     registros_vistos = set()
 
-    for numero, pagina in enumerate(
-        paginas,
-        start=1,
-    ):
-        encontradas = (
-            extraer_notificaciones_pagina(
-                pagina["contenido"],
-                pagina["url"],
-            )
+    for pagina in paginas:
+        encontradas = extraer_pagina(
+            pagina
         )
 
+        fecha_texto = pagina[
+            "fecha"
+        ].strftime("%d/%m/%Y")
+
         print(
-            f"Página {numero}: "
-            f"{len(encontradas)} notificaciones"
+            f"{fecha_texto}: "
+            f"{len(encontradas)} "
+            "notificaciones encontradas"
         )
 
         for notificacion in encontradas:
@@ -650,14 +559,14 @@ def cargar_historial():
         return []
 
     try:
-        datos = json.loads(
+        contenido = json.loads(
             ARCHIVO_HISTORIAL.read_text(
                 encoding="utf-8"
             )
         )
 
-        if isinstance(datos, list):
-            return datos
+        if isinstance(contenido, list):
+            return contenido
 
     except (
         OSError,
@@ -671,9 +580,7 @@ def cargar_historial():
 def guardar_historial(notificaciones):
     ARCHIVO_HISTORIAL.write_text(
         json.dumps(
-            notificaciones[
-                :MAXIMO_ENTRADAS
-            ],
+            notificaciones[:MAXIMO_ENTRADAS],
             ensure_ascii=False,
             indent=2,
         ),
@@ -718,7 +625,7 @@ def mezclar_notificaciones(
 
 
 # ============================================================
-# CREACIÓN DEL RSS
+# RSS
 # ============================================================
 
 def crear_rss(notificaciones):
@@ -837,7 +744,6 @@ def crear_rss(notificaciones):
         xml_declaration=True,
     )
 
-    # Verifica que el XML creado sea válido.
     ET.parse(ARCHIVO_RSS)
 
     print(
@@ -856,7 +762,6 @@ def main():
     print("========================================")
 
     paginas = descargar_resultados()
-
     nuevas = extraer_todas(paginas)
 
     anteriores = cargar_historial()
@@ -872,7 +777,7 @@ def main():
     print("")
     print("Proceso finalizado correctamente.")
     print(
-        f"Notificaciones encontradas: "
+        f"Notificaciones nuevas encontradas: "
         f"{len(nuevas)}"
     )
     print(
@@ -883,8 +788,8 @@ def main():
 
     if not nuevas:
         print(
-            "AVISO: la CNMV respondió, pero "
-            "no se extrajo ninguna notificación."
+            "AVISO: no se extrajo ninguna "
+            "notificación."
         )
 
 
