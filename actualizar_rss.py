@@ -154,11 +154,7 @@ def formatear_numero(valor, decimales=2):
         return "No publicado"
 
     cuantizador = Decimal("1").scaleb(-decimales)
-
-    texto = (
-        f"{valor.quantize(cuantizador):,"
-        f".{decimales}f}"
-    )
+    texto = f"{valor.quantize(cuantizador):,.{decimales}f}"
 
     return (
         texto
@@ -180,7 +176,7 @@ def formatear_acciones(valor):
 
 
 # ============================================================
-# DESCARGA DE RESULTADOS
+# DESCARGA DE LA CNMV
 # ============================================================
 
 def descargar_dia(sesion, fecha):
@@ -535,7 +531,7 @@ def crear_notificacion(
 
     identificador = hashlib.sha256(
         (
-            "cnmv-directivos-operaciones-v1|"
+            "cnmv-directivos-operaciones-v2|"
             f"{registro}"
         ).encode("utf-8")
     ).hexdigest()
@@ -618,7 +614,7 @@ def extraer_todas(paginas):
 
 
 # ============================================================
-# EXTRACCIÓN DE OPERACIONES DE LOS PDF
+# LECTURA DE LOS PDF
 # ============================================================
 
 def extraer_texto_pdf(contenido):
