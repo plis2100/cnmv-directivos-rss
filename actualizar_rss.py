@@ -4,6 +4,8 @@ import json
 import re
 import sys
 import time
+from decimal import Decimal, InvalidOperation
+from io import BytesIO
 from datetime import datetime, timedelta, timezone
 from email.utils import format_datetime
 from pathlib import Path
@@ -13,6 +15,7 @@ from zoneinfo import ZoneInfo
 
 import requests
 from bs4 import BeautifulSoup
+from pypdf import PdfReader
 
 
 # ============================================================
@@ -40,12 +43,8 @@ URL_RSS = (
 ARCHIVO_RSS = Path("feed.xml")
 ARCHIVO_HISTORIAL = Path("historial.json")
 
-# Primera ejecución: últimos 60 días.
 DIAS_PRIMERA_EJECUCION = 60
-
-# Ejecuciones posteriores: últimos 7 días.
 DIAS_EJECUCIONES_POSTERIORES = 7
-
 MAXIMO_ENTRADAS = 1000
 
 ZONA_HORARIA = ZoneInfo("Europe/Madrid")
@@ -53,8 +52,7 @@ ZONA_HORARIA = ZoneInfo("Europe/Madrid")
 CABECERAS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 "
-        "Chrome/136.0 Safari/537.36"
+        "AppleWebKit/537.36 Chrome/136.0 Safari/537.36"
     ),
     "Accept": (
         "text/html,application/xhtml+xml,"
@@ -131,8 +129,58 @@ def fecha_rss(fecha):
     )
 
 
+def numero_decimal_es(valor):
+    texto = limpiar(valor).replace(" ", "")
+
+    if not texto:
+        return None
+
+    if "," in texto:
+        texto = texto.replace(".", "")
+        texto = texto.replace(",", ".")
+
+    elif texto.count(".") > 1:
+        texto = texto.replace(".", "")
+
+    try:
+        return Decimal(texto)
+
+    except InvalidOperation:
+        return None
+
+
+def formatear_numero(valor, decimales=2):
+    if valor is None:
+        return "No publicado"
+
+    cuantizador = Decimal("1").scaleb(-decimales)
+
+    texto = (
+        f"{valor.quantize(cuantizador):,"
+        f".{decimales}f}"
+    )
+
+    return (
+        texto
+        .replace(",", "X")
+        .replace(".", ",")
+        .replace("X", ".")
+    )
+
+
+def formatear_acciones(valor):
+    if valor is None:
+        return "No publicado"
+
+    if valor == valor.to_integral_value():
+        texto = f"{int(valor):,}"
+        return texto.replace(",", ".")
+
+    return formatear_numero(valor, 2)
+
+
 # ============================================================
-# DESCARGA DE LA CNMV
+# DESCARGA DE RESULTADOS
 # ============================================================
 
 def descargar_dia(sesion, fecha):
@@ -229,14 +277,13 @@ def descargar_resultados():
                 }
             )
 
-        # Evita enviar demasiadas solicitudes seguidas.
         time.sleep(0.25)
 
     return paginas
 
 
 # ============================================================
-# EXTRACCIÓN DE NOTIFICACIONES
+# EXTRACCIÓN DEL LISTADO
 # ============================================================
 
 def patron_registro():
@@ -252,8 +299,6 @@ def encontrar_bloques(sopa):
     bloques = []
     vistos = set()
 
-    # En la página de la CNMV las notificaciones
-    # suelen estar contenidas en elementos li o div.
     for elemento in sopa.find_all(
         ["li", "article", "section", "tr", "div"]
     ):
@@ -266,8 +311,6 @@ def encontrar_bloques(sopa):
 
         registros = patron.findall(texto)
 
-        # El contenedor exacto de una notificación
-        # debe tener un único número de registro.
         if len(registros) != 1:
             continue
 
@@ -276,7 +319,6 @@ def encontrar_bloques(sopa):
         if registro in vistos:
             continue
 
-        # Debe contener también un declarante.
         if not re.search(
             r"Declarante\s*:",
             texto,
@@ -331,10 +373,7 @@ def obtener_motivo(texto):
     return ""
 
 
-def obtener_empresa(
-    texto,
-    fecha_texto,
-):
+def obtener_empresa(texto, fecha_texto):
     resultado = texto
 
     if fecha_texto:
@@ -365,7 +404,10 @@ def obtener_empresa(
     )
 
 
-def obtener_enlace(elemento, url_base):
+def obtener_enlaces(elemento, url_base):
+    enlace_empresa = url_base
+    enlace_documento = ""
+
     for enlace in elemento.find_all(
         "a",
         href=True,
@@ -382,12 +424,21 @@ def obtener_enlace(elemento, url_base):
         ):
             continue
 
-        return urljoin(
+        url = urljoin(
             url_base,
             href,
         )
 
-    return url_base
+        if (
+            "webservices/verdocumento"
+            in url.lower()
+        ):
+            enlace_documento = url
+
+        elif enlace_empresa == url_base:
+            enlace_empresa = url
+
+    return enlace_empresa, enlace_documento
 
 
 def crear_notificacion(
@@ -410,8 +461,10 @@ def crear_notificacion(
         fecha = convertir_fecha(
             fecha_texto
         )
+
     else:
         fecha = fecha_consultada
+
         fecha_texto = fecha.strftime(
             "%d/%m/%Y"
         )
@@ -424,9 +477,17 @@ def crear_notificacion(
         fecha_texto,
     )
 
-    enlace = obtener_enlace(
+    (
+        enlace_empresa,
+        enlace_documento,
+    ) = obtener_enlaces(
         elemento,
         url_base,
+    )
+
+    enlace = (
+        enlace_documento
+        or enlace_empresa
     )
 
     titulo = (
@@ -474,7 +535,7 @@ def crear_notificacion(
 
     identificador = hashlib.sha256(
         (
-            "cnmv-directivos-v3|"
+            "cnmv-directivos-operaciones-v1|"
             f"{registro}"
         ).encode("utf-8")
     ).hexdigest()
@@ -484,10 +545,16 @@ def crear_notificacion(
         "registro": registro,
         "titulo": titulo,
         "url": enlace,
+        "url_empresa": enlace_empresa,
+        "url_documento": enlace_documento,
         "descripcion": "".join(
             descripcion
         ),
         "fecha": fecha.isoformat(),
+        "empresa": empresa,
+        "declarante": declarante,
+        "fecha_texto": fecha_texto,
+        "motivo": motivo,
     }
 
 
@@ -551,6 +618,311 @@ def extraer_todas(paginas):
 
 
 # ============================================================
+# EXTRACCIÓN DE OPERACIONES DE LOS PDF
+# ============================================================
+
+def extraer_texto_pdf(contenido):
+    lector = PdfReader(
+        BytesIO(contenido)
+    )
+
+    partes = []
+
+    for pagina in lector.pages:
+        try:
+            texto = pagina.extract_text(
+                extraction_mode="layout"
+            )
+
+        except TypeError:
+            texto = pagina.extract_text()
+
+        if texto:
+            partes.append(texto)
+
+    return "\n".join(partes)
+
+
+def extraer_operaciones(texto):
+    operaciones = []
+
+    naturalezas = (
+        "Compra|Venta|Adquisici[oó]n|"
+        "Transmisi[oó]n|Suscripci[oó]n|"
+        "Canje|Donaci[oó]n|Ejercicio|"
+        "Aceptaci[oó]n|Entrega|Recepci[oó]n"
+    )
+
+    patron = re.compile(
+        rf"\b(?P<tipo>{naturalezas})\b\s+"
+        r"(?P<fecha>\d{2}/\d{2}/\d{4})\s+"
+        r"(?P<lugar>[A-Z0-9.\- ]{2,30}?)\s+"
+        r"(?P<volumen>\d[\d.,]*)\s+"
+        r"(?P<precio>\d[\d.,]*)\s+"
+        r"(?P<divisa>[A-Z]{3})\b",
+        flags=re.IGNORECASE,
+    )
+
+    for linea in texto.splitlines():
+        linea_limpia = limpiar(linea)
+
+        coincidencia = patron.search(
+            linea_limpia
+        )
+
+        if not coincidencia:
+            continue
+
+        volumen = numero_decimal_es(
+            coincidencia.group("volumen")
+        )
+
+        precio = numero_decimal_es(
+            coincidencia.group("precio")
+        )
+
+        operaciones.append(
+            {
+                "tipo": limpiar(
+                    coincidencia.group("tipo")
+                ).capitalize(),
+                "fecha": coincidencia.group(
+                    "fecha"
+                ),
+                "lugar": limpiar(
+                    coincidencia.group("lugar")
+                ),
+                "volumen": volumen,
+                "precio": precio,
+                "divisa": coincidencia.group(
+                    "divisa"
+                ).upper(),
+            }
+        )
+
+    return operaciones
+
+
+def reconstruir_presentacion(
+    notificacion,
+    operaciones,
+):
+    empresa = notificacion.get(
+        "empresa",
+        "Empresa no identificada",
+    )
+
+    declarante = notificacion.get(
+        "declarante",
+        "Declarante no identificado",
+    )
+
+    fecha_texto = notificacion.get(
+        "fecha_texto",
+        "",
+    )
+
+    registro = notificacion.get(
+        "registro",
+        "",
+    )
+
+    motivo = notificacion.get(
+        "motivo",
+        "",
+    )
+
+    documento = notificacion.get(
+        "url_documento",
+        "",
+    )
+
+    if operaciones:
+        principal = operaciones[0]
+
+        titulo = (
+            "CNMV DIRECTIVOS | "
+            f"{empresa} | "
+            f"{declarante} | "
+            f"{principal['tipo'].upper()}: "
+            f"{formatear_acciones(principal['volumen'])} "
+            "acciones | "
+            f"{formatear_numero(principal['precio'], 4)} "
+            f"{principal['divisa']} | "
+            f"{principal['fecha']} | "
+            f"{principal['lugar']}"
+        )
+
+        if len(operaciones) > 1:
+            titulo += (
+                f" | +{len(operaciones) - 1} "
+                "operaciones"
+            )
+
+    else:
+        titulo = (
+            "CNMV DIRECTIVOS | "
+            f"{fecha_texto} | "
+            f"{empresa} | "
+            f"{declarante}"
+        )
+
+    descripcion = [
+        (
+            "<p><strong>Empresa:</strong> "
+            f"{html.escape(empresa)}</p>"
+        ),
+        (
+            "<p><strong>Declarante:</strong> "
+            f"{html.escape(declarante)}</p>"
+        ),
+        (
+            "<p><strong>Fecha de publicación:"
+            "</strong> "
+            f"{html.escape(fecha_texto)}</p>"
+        ),
+        (
+            "<p><strong>Número de registro:"
+            "</strong> "
+            f"{html.escape(registro)}</p>"
+        ),
+    ]
+
+    if motivo:
+        descripcion.append(
+            (
+                "<p><strong>Motivo:</strong> "
+                f"{html.escape(motivo)}</p>"
+            )
+        )
+
+    descripcion.append("<hr>")
+
+    if operaciones:
+        descripcion.append(
+            "<p><strong>"
+            "OPERACIONES DECLARADAS"
+            "</strong></p><ul>"
+        )
+
+        for operacion in operaciones:
+            descripcion.append(
+                "<li>"
+                f"<strong>{html.escape(operacion['tipo'])}:"
+                "</strong> "
+                f"{formatear_acciones(operacion['volumen'])} "
+                "acciones; "
+                f"<strong>precio:</strong> "
+                f"{formatear_numero(operacion['precio'], 4)} "
+                f"{html.escape(operacion['divisa'])}; "
+                f"<strong>fecha:</strong> "
+                f"{html.escape(operacion['fecha'])}; "
+                f"<strong>mercado:</strong> "
+                f"{html.escape(operacion['lugar'])}."
+                "</li>"
+            )
+
+        descripcion.append("</ul>")
+
+    else:
+        descripcion.append(
+            "<p><strong>Operaciones:</strong> "
+            "no se pudieron extraer automáticamente "
+            "del documento.</p>"
+        )
+
+    if documento:
+        descripcion.append(
+            f'<p><a href="{html.escape(documento)}">'
+            "Abrir documento oficial de la CNMV"
+            "</a></p>"
+        )
+
+    notificacion["titulo"] = titulo
+
+    notificacion["descripcion"] = "".join(
+        descripcion
+    )
+
+    notificacion["detalle_extraido"] = True
+
+    return notificacion
+
+
+def completar_detalles(notificaciones):
+    sesion = requests.Session()
+    sesion.headers.update(CABECERAS)
+
+    total = len(notificaciones)
+
+    for indice, notificacion in enumerate(
+        notificaciones,
+        start=1,
+    ):
+        documento = notificacion.get(
+            "url_documento",
+            "",
+        )
+
+        if not documento:
+            print(
+                f"Registro "
+                f"{notificacion.get('registro')}: "
+                "sin enlace al documento."
+            )
+
+            continue
+
+        try:
+            respuesta = sesion.get(
+                documento,
+                timeout=(15, 60),
+            )
+
+            respuesta.raise_for_status()
+
+            if not respuesta.content.startswith(
+                b"%PDF"
+            ):
+                raise RuntimeError(
+                    "El documento descargado "
+                    "no es un PDF."
+                )
+
+            texto = extraer_texto_pdf(
+                respuesta.content
+            )
+
+            operaciones = extraer_operaciones(
+                texto
+            )
+
+            reconstruir_presentacion(
+                notificacion,
+                operaciones,
+            )
+
+            print(
+                f"Detalle {indice}/{total}: "
+                f"registro "
+                f"{notificacion.get('registro')} - "
+                f"{len(operaciones)} operaciones."
+            )
+
+        except Exception as error:
+            print(
+                f"Registro "
+                f"{notificacion.get('registro')}: "
+                "no se pudo analizar el PDF "
+                f"({error})."
+            )
+
+        time.sleep(0.20)
+
+    return notificaciones
+
+
+# ============================================================
 # HISTORIAL
 # ============================================================
 
@@ -580,7 +952,9 @@ def cargar_historial():
 def guardar_historial(notificaciones):
     ARCHIVO_HISTORIAL.write_text(
         json.dumps(
-            notificaciones[:MAXIMO_ENTRADAS],
+            notificaciones[
+                :MAXIMO_ENTRADAS
+            ],
             ensure_ascii=False,
             indent=2,
         ),
@@ -625,7 +999,7 @@ def mezclar_notificaciones(
 
 
 # ============================================================
-# RSS
+# CREACIÓN DEL RSS
 # ============================================================
 
 def crear_rss(notificaciones):
@@ -660,9 +1034,8 @@ def crear_rss(notificaciones):
         canal,
         "description",
     ).text = (
-        "Notificaciones de directivos y "
-        "personas vinculadas publicadas "
-        "por la CNMV."
+        "Operaciones de directivos y personas "
+        "vinculadas publicadas por la CNMV."
     )
 
     ET.SubElement(
@@ -736,7 +1109,11 @@ def crear_rss(notificaciones):
         ).text = "CNMV DIRECTIVOS"
 
     arbol = ET.ElementTree(rss)
-    ET.indent(arbol, space="  ")
+
+    ET.indent(
+        arbol,
+        space="  ",
+    )
 
     arbol.write(
         ARCHIVO_RSS,
@@ -757,12 +1134,27 @@ def crear_rss(notificaciones):
 # ============================================================
 
 def main():
-    print("========================================")
-    print("NOTIFICACIONES DE DIRECTIVOS CNMV")
-    print("========================================")
+    print(
+        "========================================"
+    )
+
+    print(
+        "NOTIFICACIONES DE DIRECTIVOS CNMV"
+    )
+
+    print(
+        "========================================"
+    )
 
     paginas = descargar_resultados()
-    nuevas = extraer_todas(paginas)
+
+    nuevas = extraer_todas(
+        paginas
+    )
+
+    nuevas = completar_detalles(
+        nuevas
+    )
 
     anteriores = cargar_historial()
 
@@ -771,20 +1163,32 @@ def main():
         anteriores,
     )
 
-    guardar_historial(resultado)
-    crear_rss(resultado)
+    guardar_historial(
+        resultado
+    )
+
+    crear_rss(
+        resultado
+    )
 
     print("")
-    print("Proceso finalizado correctamente.")
     print(
-        f"Notificaciones nuevas encontradas: "
+        "Proceso finalizado correctamente."
+    )
+
+    print(
+        "Notificaciones encontradas: "
         f"{len(nuevas)}"
     )
+
     print(
-        f"Entradas guardadas en RSS: "
+        "Entradas guardadas en RSS: "
         f"{len(resultado)}"
     )
-    print(f"URL para Feedly: {URL_RSS}")
+
+    print(
+        f"URL para Feedly: {URL_RSS}"
+    )
 
     if not nuevas:
         print(
@@ -799,8 +1203,10 @@ if __name__ == "__main__":
 
     except Exception as error:
         print(
-            f"ERROR: {type(error).__name__}: "
+            f"ERROR: "
+            f"{type(error).__name__}: "
             f"{error}",
             file=sys.stderr,
         )
+
         sys.exit(1)
