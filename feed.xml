@@ -5,7 +5,7 @@
     <link>https://www.cnmv.es/portal/Consultas/Directivos-Consulta</link>
     <description>Operaciones de directivos y personas vinculadas publicadas por la CNMV.</description>
     <language>es-ES</language>
-    <lastBuildDate>Tue, 29 Sep 2026 16:33:33 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 22:24:25 +0000</lastBuildDate>
     <ttl>120</ttl>
     <atom:link href="https://raw.githubusercontent.com/plis2100/cnmv-directivos-rss/main/feed.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -38,6 +38,14 @@
       <guid isPermaLink="false">c152e08c63d58134b9f5af6f7b6b0fdab9d8ac606962cd89014d3386832edb11</guid>
       <pubDate>Tue, 29 Sep 2026 10:00:00 +0000</pubDate>
       <description>&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; RENTA 4 BANCO, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; CARTERA DE DIRECTIVOS 2011, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Fecha de publicación:&lt;/strong&gt; 29/09/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026127693&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona Estrechamente Vinculada&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Compra:&lt;/strong&gt; 72 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 19,3000 EUR; &lt;strong&gt;fecha:&lt;/strong&gt; 24/09/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=jdboLioW4QD1%2fgT1iZebTFTalJi%2bXhpnW%2fYPRtbH5t700jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
+      <category>CNMV DIRECTIVOS</category>
+    </item>
+    <item>
+      <title>CNMV DIRECTIVOS | GESTAMP AUTOMOCION, S.A. | ACEK DESARROLLO Y GESTIÓN INDUSTRIAL, S.L. | COMPRA: 35.452 acciones | 3,0000 EUR | 24/09/2026 | XMAD | +1 operaciones</title>
+      <link>https://www.cnmv.es/webservices/verdocumento/ver?e=5QNGnSXViBHXlP4TVGmAgKeOZeKJxZQKVeKK8T7eNWT00jEuhbk%2bTc0vHNC%2bVxBv</link>
+      <guid isPermaLink="false">e2b962c11ce2c7e422ad5a73534a83fec62fa689ce5f23f2f7c52a99f1408163</guid>
+      <pubDate>Tue, 29 Sep 2026 10:00:00 +0000</pubDate>
+      <description>&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; GESTAMP AUTOMOCION, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; ACEK DESARROLLO Y GESTIÓN INDUSTRIAL, S.L.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Fecha de publicación:&lt;/strong&gt; 29/09/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026128211&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona Estrechamente Vinculada&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Compra:&lt;/strong&gt; 35.452 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 3,0000 EUR; &lt;strong&gt;fecha:&lt;/strong&gt; 24/09/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Compra:&lt;/strong&gt; 340 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 3,0000 EUR; &lt;strong&gt;fecha:&lt;/strong&gt; 25/09/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=5QNGnSXViBHXlP4TVGmAgKeOZeKJxZQKVeKK8T7eNWT00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
       <category>CNMV DIRECTIVOS</category>
     </item>
     <item>

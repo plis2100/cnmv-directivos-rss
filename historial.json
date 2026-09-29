@@ -60,6 +60,21 @@
     "detalle_extraido": true
   },
   {
+    "id": "e2b962c11ce2c7e422ad5a73534a83fec62fa689ce5f23f2f7c52a99f1408163",
+    "registro": "2026128211",
+    "titulo": "CNMV DIRECTIVOS | GESTAMP AUTOMOCION, S.A. | ACEK DESARROLLO Y GESTIÓN INDUSTRIAL, S.L. | COMPRA: 35.452 acciones | 3,0000 EUR | 24/09/2026 | XMAD | +1 operaciones",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=5QNGnSXViBHXlP4TVGmAgKeOZeKJxZQKVeKK8T7eNWT00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A48943864",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=5QNGnSXViBHXlP4TVGmAgKeOZeKJxZQKVeKK8T7eNWT00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>Empresa:</strong> GESTAMP AUTOMOCION, S.A.</p><p><strong>Declarante:</strong> ACEK DESARROLLO Y GESTIÓN INDUSTRIAL, S.L.</p><p><strong>Fecha de publicación:</strong> 29/09/2026</p><p><strong>Número de registro:</strong> 2026128211</p><p><strong>Motivo:</strong> Persona Estrechamente Vinculada</p><hr><p><strong>OPERACIONES DECLARADAS</strong></p><ul><li><strong>Compra:</strong> 35.452 acciones; <strong>precio:</strong> 3,0000 EUR; <strong>fecha:</strong> 24/09/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Compra:</strong> 340 acciones; <strong>precio:</strong> 3,0000 EUR; <strong>fecha:</strong> 25/09/2026; <strong>mercado:</strong> XMAD.</li></ul><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=5QNGnSXViBHXlP4TVGmAgKeOZeKJxZQKVeKK8T7eNWT00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-09-29T12:00:00+02:00",
+    "empresa": "GESTAMP AUTOMOCION, S.A.",
+    "declarante": "ACEK DESARROLLO Y GESTIÓN INDUSTRIAL, S.L.",
+    "fecha_texto": "29/09/2026",
+    "motivo": "Persona Estrechamente Vinculada",
+    "detalle_extraido": true
+  },
+  {
     "id": "3701885e99382fc0e43790e88ad4f2056429934c0b45a779b20a0ccf869b73a8",
     "registro": "2026127418",
     "titulo": "CNMV DIRECTIVOS | CELLNEX TELECOM, S.A. | CIFF Capital UK LP | VENTA: 3.247 acciones | 25,1800 EUR | 23/09/2026 | AQEA | +10 operaciones",
