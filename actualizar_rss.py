@@ -486,9 +486,11 @@ def crear_notificacion(
         or enlace_empresa
     )
 
+    # La fecha de publicación CNMV queda SIEMPRE
+    # al principio del título.
     titulo = (
-        "CNMV DIRECTIVOS | "
         f"{fecha_texto} | "
+        "CNMV DIRECTIVOS | "
         f"{empresa} | "
         f"{declarante}"
     )
@@ -503,7 +505,8 @@ def crear_notificacion(
             f"{html.escape(declarante)}</p>"
         ),
         (
-            "<p><strong>Fecha:</strong> "
+            "<p><strong>Fecha de publicación:"
+            "</strong> "
             f"{html.escape(fecha_texto)}</p>"
         ),
         (
@@ -733,10 +736,21 @@ def reconstruir_presentacion(
         "",
     )
 
+    # ========================================================
+    # CAMBIO IMPORTANTE PARA FEEDLY:
+    #
+    # La FECHA DE PUBLICACIÓN CNMV aparece SIEMPRE
+    # al principio del título.
+    #
+    # La fecha de la operación se identifica expresamente
+    # como "Operación:" para no confundir ambas fechas.
+    # ========================================================
+
     if operaciones:
         principal = operaciones[0]
 
         titulo = (
+            f"{fecha_texto} | "
             "CNMV DIRECTIVOS | "
             f"{empresa} | "
             f"{declarante} | "
@@ -745,7 +759,7 @@ def reconstruir_presentacion(
             "acciones | "
             f"{formatear_numero(principal['precio'], 4)} "
             f"{principal['divisa']} | "
-            f"{principal['fecha']} | "
+            f"Operación: {principal['fecha']} | "
             f"{principal['lugar']}"
         )
 
@@ -757,13 +771,18 @@ def reconstruir_presentacion(
 
     else:
         titulo = (
-            "CNMV DIRECTIVOS | "
             f"{fecha_texto} | "
+            "CNMV DIRECTIVOS | "
             f"{empresa} | "
             f"{declarante}"
         )
 
     descripcion = [
+        (
+            "<p><strong>FECHA DE PUBLICACIÓN CNMV:"
+            "</strong> "
+            f"{html.escape(fecha_texto)}</p>"
+        ),
         (
             "<p><strong>Empresa:</strong> "
             f"{html.escape(empresa)}</p>"
@@ -771,11 +790,6 @@ def reconstruir_presentacion(
         (
             "<p><strong>Declarante:</strong> "
             f"{html.escape(declarante)}</p>"
-        ),
-        (
-            "<p><strong>Fecha de publicación:"
-            "</strong> "
-            f"{html.escape(fecha_texto)}</p>"
         ),
         (
             "<p><strong>Número de registro:"
@@ -811,7 +825,7 @@ def reconstruir_presentacion(
                 f"<strong>precio:</strong> "
                 f"{formatear_numero(operacion['precio'], 4)} "
                 f"{html.escape(operacion['divisa'])}; "
-                f"<strong>fecha:</strong> "
+                f"<strong>fecha de operación:</strong> "
                 f"{html.escape(operacion['fecha'])}; "
                 f"<strong>mercado:</strong> "
                 f"{html.escape(operacion['lugar'])}."
@@ -1083,6 +1097,7 @@ def crear_rss(notificaciones):
             {"isPermaLink": "false"},
         ).text = notificacion["id"]
 
+        # Fecha oficial de publicación de la CNMV.
         fecha = convertir_fecha(
             notificacion.get("fecha")
         )
@@ -1117,6 +1132,7 @@ def crear_rss(notificaciones):
         xml_declaration=True,
     )
 
+    # Comprueba que el XML generado es válido.
     ET.parse(ARCHIVO_RSS)
 
     print(
