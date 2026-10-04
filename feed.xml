@@ -5,7 +5,7 @@
     <link>https://www.cnmv.es/portal/Consultas/Directivos-Consulta</link>
     <description>Operaciones de directivos y personas vinculadas publicadas por la CNMV.</description>
     <language>es-ES</language>
-    <lastBuildDate>Sun, 04 Oct 2026 19:43:15 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2026 23:18:13 +0000</lastBuildDate>
     <ttl>120</ttl>
     <atom:link href="https://raw.githubusercontent.com/plis2100/cnmv-directivos-rss/main/feed.xml" rel="self" type="application/rss+xml" />
     <item>
