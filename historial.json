@@ -30,6 +30,21 @@
     "detalle_extraido": true
   },
   {
+    "id": "52c6b34dc36566e3beb9a8354b86cbec3468f7cf2d99e226de28ae3391bfa9ff",
+    "registro": "2026130653",
+    "titulo": "06/10/2026 | CNMV DIRECTIVOS | GESTAMP AUTOMOCION, S.A. | ACEK DESARROLLO Y GESTIÓN INDUSTRIAL, S.L. | COMPRA: 35.122 acciones | 3,0000 EUR | Operación: 01/10/2026 | XMAD | +1 operaciones",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=fuE8rAOwX7wA8lkk7RUdHY33yiNouMjzrJoXjffTPWv00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A48943864",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=fuE8rAOwX7wA8lkk7RUdHY33yiNouMjzrJoXjffTPWv00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 06/10/2026</p><p><strong>Empresa:</strong> GESTAMP AUTOMOCION, S.A.</p><p><strong>Declarante:</strong> ACEK DESARROLLO Y GESTIÓN INDUSTRIAL, S.L.</p><p><strong>Número de registro:</strong> 2026130653</p><p><strong>Motivo:</strong> Persona Estrechamente Vinculada</p><hr><p><strong>OPERACIONES DECLARADAS</strong></p><ul><li><strong>Compra:</strong> 35.122 acciones; <strong>precio:</strong> 3,0000 EUR; <strong>fecha de operación:</strong> 01/10/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Compra:</strong> 3.692 acciones; <strong>precio:</strong> 2,9900 EUR; <strong>fecha de operación:</strong> 02/10/2026; <strong>mercado:</strong> XMAD.</li></ul><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=fuE8rAOwX7wA8lkk7RUdHY33yiNouMjzrJoXjffTPWv00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-10-06T12:00:00+02:00",
+    "empresa": "GESTAMP AUTOMOCION, S.A.",
+    "declarante": "ACEK DESARROLLO Y GESTIÓN INDUSTRIAL, S.L.",
+    "fecha_texto": "06/10/2026",
+    "motivo": "Persona Estrechamente Vinculada",
+    "detalle_extraido": true
+  },
+  {
     "id": "9fb9008c2bef932c11d11854ac161787b24981d4b580217ca1911f2681932733",
     "registro": "2026130027",
     "titulo": "05/10/2026 | CNMV DIRECTIVOS | EBRO FOODS, S.A. | EMPRESAS COMERCIALES E INDUSTRIALES VALENCIANAS, S.L. | COMPRA: 11.105 acciones | 17,8800 EUR | Operación: 01/10/2026 | XMAD | +4 operaciones",
