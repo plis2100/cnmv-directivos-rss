@@ -1,5 +1,35 @@
 [
   {
+    "id": "61fbf6947a9fadf00257d0ed3395897e77649546209ace676bba8411cabcc371",
+    "registro": "2026133667",
+    "titulo": "15/10/2026 | CNMV DIRECTIVOS | CLINICA BAVIERA, S.A. | LUIS GRAVALOS SORIA | VENTA: 371 acciones | 55,0000 EUR | Operación: 08/10/2026 | XMAD | +4 operaciones",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=ELgvfmvQ26nyaEsRrQEyINEzZjXY74K%2fOgnTgNC5yLL00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A-80240427",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=ELgvfmvQ26nyaEsRrQEyINEzZjXY74K%2fOgnTgNC5yLL00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 15/10/2026</p><p><strong>Empresa:</strong> CLINICA BAVIERA, S.A.</p><p><strong>Declarante:</strong> LUIS GRAVALOS SORIA</p><p><strong>Número de registro:</strong> 2026133667</p><p><strong>Motivo:</strong> Persona con Responsabilidad de Dirección</p><hr><p><strong>OPERACIONES DECLARADAS</strong></p><ul><li><strong>Venta:</strong> 371 acciones; <strong>precio:</strong> 55,0000 EUR; <strong>fecha de operación:</strong> 08/10/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Venta:</strong> 40 acciones; <strong>precio:</strong> 55,0000 EUR; <strong>fecha de operación:</strong> 09/10/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Venta:</strong> 1.559 acciones; <strong>precio:</strong> 55,0000 EUR; <strong>fecha de operación:</strong> 12/10/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Venta:</strong> 1.941 acciones; <strong>precio:</strong> 55,0000 EUR; <strong>fecha de operación:</strong> 13/10/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Venta:</strong> 199 acciones; <strong>precio:</strong> 55,0000 EUR; <strong>fecha de operación:</strong> 15/10/2026; <strong>mercado:</strong> XMAD.</li></ul><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=ELgvfmvQ26nyaEsRrQEyINEzZjXY74K%2fOgnTgNC5yLL00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-10-15T12:00:00+02:00",
+    "empresa": "CLINICA BAVIERA, S.A.",
+    "declarante": "LUIS GRAVALOS SORIA",
+    "fecha_texto": "15/10/2026",
+    "motivo": "Persona con Responsabilidad de Dirección",
+    "detalle_extraido": true
+  },
+  {
+    "id": "9eed61a1467972100ea9813884eb29f426013aa999e9f2138a6212fbb4c21bd2",
+    "registro": "2026133662",
+    "titulo": "15/10/2026 | CNMV DIRECTIVOS | MERLIN PROPERTIES, SOCIMI, S.A. | Ismael Clemente Orrego | COMPRA: 10.000 acciones | 11,4900 EUR | Operación: 15/10/2026 | XMAD",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=ELgvfmvQ26nyaEsRrQEyIDF14cIQ9zpZX4zvvBfF77n00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A86977790",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=ELgvfmvQ26nyaEsRrQEyIDF14cIQ9zpZX4zvvBfF77n00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 15/10/2026</p><p><strong>Empresa:</strong> MERLIN PROPERTIES, SOCIMI, S.A.</p><p><strong>Declarante:</strong> Ismael Clemente Orrego</p><p><strong>Número de registro:</strong> 2026133662</p><p><strong>Motivo:</strong> Persona con Responsabilidad de Dirección</p><hr><p><strong>OPERACIONES DECLARADAS</strong></p><ul><li><strong>Compra:</strong> 10.000 acciones; <strong>precio:</strong> 11,4900 EUR; <strong>fecha de operación:</strong> 15/10/2026; <strong>mercado:</strong> XMAD.</li></ul><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=ELgvfmvQ26nyaEsRrQEyIDF14cIQ9zpZX4zvvBfF77n00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-10-15T12:00:00+02:00",
+    "empresa": "MERLIN PROPERTIES, SOCIMI, S.A.",
+    "declarante": "Ismael Clemente Orrego",
+    "fecha_texto": "15/10/2026",
+    "motivo": "Persona con Responsabilidad de Dirección",
+    "detalle_extraido": true
+  },
+  {
     "id": "0ee54034a553c87a16d7228b941d065cc869253628edf0c3ab2068cc25f72385",
     "registro": "2026132966",
     "titulo": "14/10/2026 | CNMV DIRECTIVOS | LINGOTES ESPECIALES, S.A. | CORPORACION OUDALOI SL | COMPRA: 693 acciones | 5,4400 EUR | Operación: 06/10/2026 | XMAD | +5 operaciones",
