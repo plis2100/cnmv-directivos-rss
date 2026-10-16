@@ -30,6 +30,21 @@
     "detalle_extraido": true
   },
   {
+    "id": "8a10b55a124a10160d3f1f952d8a4bef7e14deb6f2f7712592fe9bb01f9fe359",
+    "registro": "2026133793",
+    "titulo": "15/10/2026 | CNMV DIRECTIVOS | CLINICA BAVIERA, S.A. | LUIS GRAVALOS SORIA | VENTA: 890 acciones | 55,0000 EUR | Operación: 15/10/2026 | XMAD",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=dWBQIZbcjsb5uZ2Jf5zSIFTalJi%2bXhpnW%2fYPRtbH5t700jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A-80240427",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=dWBQIZbcjsb5uZ2Jf5zSIFTalJi%2bXhpnW%2fYPRtbH5t700jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 15/10/2026</p><p><strong>Empresa:</strong> CLINICA BAVIERA, S.A.</p><p><strong>Declarante:</strong> LUIS GRAVALOS SORIA</p><p><strong>Número de registro:</strong> 2026133793</p><p><strong>Motivo:</strong> Persona con Responsabilidad de Dirección</p><hr><p><strong>OPERACIONES DECLARADAS</strong></p><ul><li><strong>Venta:</strong> 890 acciones; <strong>precio:</strong> 55,0000 EUR; <strong>fecha de operación:</strong> 15/10/2026; <strong>mercado:</strong> XMAD.</li></ul><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=dWBQIZbcjsb5uZ2Jf5zSIFTalJi%2bXhpnW%2fYPRtbH5t700jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-10-15T12:00:00+02:00",
+    "empresa": "CLINICA BAVIERA, S.A.",
+    "declarante": "LUIS GRAVALOS SORIA",
+    "fecha_texto": "15/10/2026",
+    "motivo": "Persona con Responsabilidad de Dirección",
+    "detalle_extraido": true
+  },
+  {
     "id": "0ee54034a553c87a16d7228b941d065cc869253628edf0c3ab2068cc25f72385",
     "registro": "2026132966",
     "titulo": "14/10/2026 | CNMV DIRECTIVOS | LINGOTES ESPECIALES, S.A. | CORPORACION OUDALOI SL | COMPRA: 693 acciones | 5,4400 EUR | Operación: 06/10/2026 | XMAD | +5 operaciones",
