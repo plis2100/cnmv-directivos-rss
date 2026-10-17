@@ -1,5 +1,35 @@
 [
   {
+    "id": "51fe669ef241e5079b3c9b56bcd8ce092349904669d23df2af5a4a2f8a83ee56",
+    "registro": "2026134359",
+    "titulo": "17/10/2026 | CNMV DIRECTIVOS | TSK ELECTRONICA Y ELECTRICIDAD, S.A. | Arturo Betegón Biempica",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=coBKDr%2frUbVk5aa%2b45FTxnag%2fhsZu9a0AehHKu32A6f00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A48035901",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=coBKDr%2frUbVk5aa%2b45FTxnag%2fhsZu9a0AehHKu32A6f00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 17/10/2026</p><p><strong>Empresa:</strong> TSK ELECTRONICA Y ELECTRICIDAD, S.A.</p><p><strong>Declarante:</strong> Arturo Betegón Biempica</p><p><strong>Número de registro:</strong> 2026134359</p><p><strong>Motivo:</strong> Persona con Responsabilidad de Dirección</p><hr><p><strong>Operaciones:</strong> no se pudieron extraer automáticamente del documento.</p><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=coBKDr%2frUbVk5aa%2b45FTxnag%2fhsZu9a0AehHKu32A6f00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-10-17T12:00:00+02:00",
+    "empresa": "TSK ELECTRONICA Y ELECTRICIDAD, S.A.",
+    "declarante": "Arturo Betegón Biempica",
+    "fecha_texto": "17/10/2026",
+    "motivo": "Persona con Responsabilidad de Dirección",
+    "detalle_extraido": true
+  },
+  {
+    "id": "b7c39bb2469ff1da9685a1bb3769a72694d66c8194fae4be1e393bbeaea89820",
+    "registro": "2026134361",
+    "titulo": "17/10/2026 | CNMV DIRECTIVOS | TSK ELECTRONICA Y ELECTRICIDAD, S.A. | Arturo Betegón Biempica | COMPRA: 1.000 acciones | 5,3000 EUR | Operación: 14/05/2026 | XMAD",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=coBKDr%2frUbVk5aa%2b45FTxoqjd%2fR2sjlp6nVVrXIIC0n00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A48035901",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=coBKDr%2frUbVk5aa%2b45FTxoqjd%2fR2sjlp6nVVrXIIC0n00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 17/10/2026</p><p><strong>Empresa:</strong> TSK ELECTRONICA Y ELECTRICIDAD, S.A.</p><p><strong>Declarante:</strong> Arturo Betegón Biempica</p><p><strong>Número de registro:</strong> 2026134361</p><p><strong>Motivo:</strong> Persona con Responsabilidad de Dirección</p><hr><p><strong>OPERACIONES DECLARADAS</strong></p><ul><li><strong>Compra:</strong> 1.000 acciones; <strong>precio:</strong> 5,3000 EUR; <strong>fecha de operación:</strong> 14/05/2026; <strong>mercado:</strong> XMAD.</li></ul><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=coBKDr%2frUbVk5aa%2b45FTxoqjd%2fR2sjlp6nVVrXIIC0n00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-10-17T12:00:00+02:00",
+    "empresa": "TSK ELECTRONICA Y ELECTRICIDAD, S.A.",
+    "declarante": "Arturo Betegón Biempica",
+    "fecha_texto": "17/10/2026",
+    "motivo": "Persona con Responsabilidad de Dirección",
+    "detalle_extraido": true
+  },
+  {
     "id": "61fbf6947a9fadf00257d0ed3395897e77649546209ace676bba8411cabcc371",
     "registro": "2026133667",
     "titulo": "15/10/2026 | CNMV DIRECTIVOS | CLINICA BAVIERA, S.A. | LUIS GRAVALOS SORIA | VENTA: 371 acciones | 55,0000 EUR | Operación: 08/10/2026 | XMAD | +4 operaciones",
