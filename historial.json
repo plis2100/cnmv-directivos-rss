@@ -1,5 +1,35 @@
 [
   {
+    "id": "73c071b7dc13cebb8e33e4e8605d7f6fab464ebbaa8bcf428118e3ff0a81e771",
+    "registro": "2026134382",
+    "titulo": "18/10/2026 | CNMV DIRECTIVOS | MERLIN PROPERTIES, SOCIMI, S.A. | Fernando Ferrero Cantan | COMPRA: 1.000 acciones | 11,4100 EUR | Operación: 15/10/2026 | XMAD",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=coBKDr%2frUbVk5aa%2b45FTxkvVgd21Duy1bkZ9F3ZXrFj00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A86977790",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=coBKDr%2frUbVk5aa%2b45FTxkvVgd21Duy1bkZ9F3ZXrFj00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 18/10/2026</p><p><strong>Empresa:</strong> MERLIN PROPERTIES, SOCIMI, S.A.</p><p><strong>Declarante:</strong> Fernando Ferrero Cantan</p><p><strong>Número de registro:</strong> 2026134382</p><p><strong>Motivo:</strong> Persona con Responsabilidad de Dirección</p><hr><p><strong>OPERACIONES DECLARADAS</strong></p><ul><li><strong>Compra:</strong> 1.000 acciones; <strong>precio:</strong> 11,4100 EUR; <strong>fecha de operación:</strong> 15/10/2026; <strong>mercado:</strong> XMAD.</li></ul><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=coBKDr%2frUbVk5aa%2b45FTxkvVgd21Duy1bkZ9F3ZXrFj00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-10-18T12:00:00+02:00",
+    "empresa": "MERLIN PROPERTIES, SOCIMI, S.A.",
+    "declarante": "Fernando Ferrero Cantan",
+    "fecha_texto": "18/10/2026",
+    "motivo": "Persona con Responsabilidad de Dirección",
+    "detalle_extraido": true
+  },
+  {
+    "id": "3c1546c75f80c9fe1cf347d4234b4d73603141be9cb746c7774e6f3427047e9b",
+    "registro": "2026134383",
+    "titulo": "18/10/2026 | CNMV DIRECTIVOS | MERLIN PROPERTIES, SOCIMI, S.A. | Fernando Ramírez Baeza | COMPRA: 1.850 acciones | 11,4200 EUR | Operación: 15/10/2026 | XMAD",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=coBKDr%2frUbVk5aa%2b45FTxlHsyhhRvzPXj0OGUNrQj%2fb00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A86977790",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=coBKDr%2frUbVk5aa%2b45FTxlHsyhhRvzPXj0OGUNrQj%2fb00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 18/10/2026</p><p><strong>Empresa:</strong> MERLIN PROPERTIES, SOCIMI, S.A.</p><p><strong>Declarante:</strong> Fernando Ramírez Baeza</p><p><strong>Número de registro:</strong> 2026134383</p><p><strong>Motivo:</strong> Persona con Responsabilidad de Dirección</p><hr><p><strong>OPERACIONES DECLARADAS</strong></p><ul><li><strong>Compra:</strong> 1.850 acciones; <strong>precio:</strong> 11,4200 EUR; <strong>fecha de operación:</strong> 15/10/2026; <strong>mercado:</strong> XMAD.</li></ul><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=coBKDr%2frUbVk5aa%2b45FTxlHsyhhRvzPXj0OGUNrQj%2fb00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-10-18T12:00:00+02:00",
+    "empresa": "MERLIN PROPERTIES, SOCIMI, S.A.",
+    "declarante": "Fernando Ramírez Baeza",
+    "fecha_texto": "18/10/2026",
+    "motivo": "Persona con Responsabilidad de Dirección",
+    "detalle_extraido": true
+  },
+  {
     "id": "51fe669ef241e5079b3c9b56bcd8ce092349904669d23df2af5a4a2f8a83ee56",
     "registro": "2026134359",
     "titulo": "17/10/2026 | CNMV DIRECTIVOS | TSK ELECTRONICA Y ELECTRICIDAD, S.A. | Arturo Betegón Biempica",
