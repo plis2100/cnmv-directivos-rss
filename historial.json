@@ -1,5 +1,35 @@
 [
   {
+    "id": "3580e0d4c83383739f60fe9bf9f238bf6b768ae097f87ffa87289910ae7956e4",
+    "registro": "2026140481",
+    "titulo": "02/11/2026 | CNMV DIRECTIVOS | VIDRALA, S.A. | AZPILU, S.L.",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=XtBiGQKb3di8jMg8Dtv5gqU4mJyzPalF%2fOde04WP%2brz00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A01004324",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=XtBiGQKb3di8jMg8Dtv5gqU4mJyzPalF%2fOde04WP%2brz00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 02/11/2026</p><p><strong>Empresa:</strong> VIDRALA, S.A.</p><p><strong>Declarante:</strong> AZPILU, S.L.</p><p><strong>Número de registro:</strong> 2026140481</p><p><strong>Motivo:</strong> Persona Estrechamente Vinculada</p><hr><p><strong>Operaciones:</strong> no se pudieron extraer automáticamente del documento.</p><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=XtBiGQKb3di8jMg8Dtv5gqU4mJyzPalF%2fOde04WP%2brz00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-11-02T12:00:00+01:00",
+    "empresa": "VIDRALA, S.A.",
+    "declarante": "AZPILU, S.L.",
+    "fecha_texto": "02/11/2026",
+    "motivo": "Persona Estrechamente Vinculada",
+    "detalle_extraido": true
+  },
+  {
+    "id": "7fe1549b3642aeb6a8cfb9ca781e85dc93b704158a06442b2ced0110c2456226",
+    "registro": "2026140482",
+    "titulo": "02/11/2026 | CNMV DIRECTIVOS | VIDRALA, S.A. | MUGARBURU, S.L.",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=XtBiGQKb3di8jMg8Dtv5gkvVgd21Duy1bkZ9F3ZXrFj00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A01004324",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=XtBiGQKb3di8jMg8Dtv5gkvVgd21Duy1bkZ9F3ZXrFj00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 02/11/2026</p><p><strong>Empresa:</strong> VIDRALA, S.A.</p><p><strong>Declarante:</strong> MUGARBURU, S.L.</p><p><strong>Número de registro:</strong> 2026140482</p><p><strong>Motivo:</strong> Persona Estrechamente Vinculada</p><hr><p><strong>Operaciones:</strong> no se pudieron extraer automáticamente del documento.</p><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=XtBiGQKb3di8jMg8Dtv5gkvVgd21Duy1bkZ9F3ZXrFj00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-11-02T12:00:00+01:00",
+    "empresa": "VIDRALA, S.A.",
+    "declarante": "MUGARBURU, S.L.",
+    "fecha_texto": "02/11/2026",
+    "motivo": "Persona Estrechamente Vinculada",
+    "detalle_extraido": true
+  },
+  {
     "id": "4a8490546ad44bc1c3a0690a7f3759f757ff5e66ce8be018569bce1c2b51215c",
     "registro": "2026140053",
     "titulo": "30/10/2026 | CNMV DIRECTIVOS | EBRO FOODS, S.A. | EMPRESAS COMERCIALES E INDUSTRIALES VALENCIANAS, S.L. | COMPRA: 756 acciones | 18,1600 EUR | Operación: 27/10/2026 | XMAD | +14 operaciones",
