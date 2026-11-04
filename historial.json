@@ -150,6 +150,21 @@
     "detalle_extraido": true
   },
   {
+    "id": "dfc1e538855c3e00c4bed2a70a972c26f4fafdd92210b817aafb19a2096450d1",
+    "registro": "2026141576",
+    "titulo": "04/11/2026 | CNMV DIRECTIVOS | PUIG BRANDS, S.A. | Thomas James | VENTA: 5.000 acciones | 18,9200 EUR | Operación: 29/10/2026 | XMAD | +4 operaciones",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=pKLHE2tRKq%2fY%2fbn9dDhIblwV50KqPp7ua7KRy2b5EIT00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A66674904",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=pKLHE2tRKq%2fY%2fbn9dDhIblwV50KqPp7ua7KRy2b5EIT00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 04/11/2026</p><p><strong>Empresa:</strong> PUIG BRANDS, S.A.</p><p><strong>Declarante:</strong> Thomas James</p><p><strong>Número de registro:</strong> 2026141576</p><p><strong>Motivo:</strong> Persona con Responsabilidad de Dirección</p><hr><p><strong>OPERACIONES DECLARADAS</strong></p><ul><li><strong>Venta:</strong> 5.000 acciones; <strong>precio:</strong> 18,9200 EUR; <strong>fecha de operación:</strong> 29/10/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Venta:</strong> 5.000 acciones; <strong>precio:</strong> 18,9800 EUR; <strong>fecha de operación:</strong> 29/10/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Venta:</strong> 159 acciones; <strong>precio:</strong> 18,9500 EUR; <strong>fecha de operación:</strong> 29/10/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Venta:</strong> 5.000 acciones; <strong>precio:</strong> 19,0100 EUR; <strong>fecha de operación:</strong> 30/10/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Venta:</strong> 2.500 acciones; <strong>precio:</strong> 19,5100 EUR; <strong>fecha de operación:</strong> 02/11/2026; <strong>mercado:</strong> XMAD.</li></ul><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=pKLHE2tRKq%2fY%2fbn9dDhIblwV50KqPp7ua7KRy2b5EIT00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-11-04T12:00:00+01:00",
+    "empresa": "PUIG BRANDS, S.A.",
+    "declarante": "Thomas James",
+    "fecha_texto": "04/11/2026",
+    "motivo": "Persona con Responsabilidad de Dirección",
+    "detalle_extraido": true
+  },
+  {
     "id": "ec851f2a516ccaea63fde5dd28f227efd1e8a2ca37f7d4f44320a84fcd847e55",
     "registro": "2026140993",
     "titulo": "03/11/2026 | CNMV DIRECTIVOS | PUIG BRANDS, S.A. | Thomas James | COMPRA: 5.000 acciones | 18,9200 EUR | Operación: 29/10/2026 | XMAD | +4 operaciones",
