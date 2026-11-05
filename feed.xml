@@ -5,7 +5,7 @@
     <link>https://www.cnmv.es/portal/Consultas/Directivos-Consulta</link>
     <description>Operaciones de directivos y personas vinculadas publicadas por la CNMV.</description>
     <language>es-ES</language>
-    <lastBuildDate>Thu, 05 Nov 2026 16:33:46 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 23:42:50 +0000</lastBuildDate>
     <ttl>120</ttl>
     <atom:link href="https://raw.githubusercontent.com/plis2100/cnmv-directivos-rss/main/feed.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -22,6 +22,70 @@
       <guid isPermaLink="false">33b19412e3dea0495d92618e8d63d5457bf17d24768b474341f2a98de5323fcb</guid>
       <pubDate>Thu, 05 Nov 2026 11:00:00 +0000</pubDate>
       <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 05/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; FLUIDRA, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; NICOLÁS MARTÍNEZ FERNÁNDEZ&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026141768&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Venta:&lt;/strong&gt; 600 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 19,4700 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 03/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=d9bGEIgi2BXIpNjKtCGanX3rFEIY5zD0wyVMtmF%2fkGn00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
+      <category>CNMV DIRECTIVOS</category>
+    </item>
+    <item>
+      <title>05/11/2026 | CNMV DIRECTIVOS | PROSEGUR, COMPAÑIA DE SEGURIDAD, S.A. | Antonio Rubio Merino | VENTA: 20.000 acciones | 2,9900 EUR | Operación: 04/11/2026 | XMAD</title>
+      <link>https://www.cnmv.es/webservices/verdocumento/ver?e=vy2GjE0LXCkOtOqxaDD7nVP%2fayimMeUK1%2bMbJ9%2bt36b00jEuhbk%2bTc0vHNC%2bVxBv</link>
+      <guid isPermaLink="false">1551ecd743a477198e46bc928021f84c1756d72217b22cc3cd3f834900d18c69</guid>
+      <pubDate>Thu, 05 Nov 2026 11:00:00 +0000</pubDate>
+      <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 05/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; PROSEGUR, COMPAÑIA DE SEGURIDAD, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; Antonio Rubio Merino&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026142037&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Venta:&lt;/strong&gt; 20.000 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 2,9900 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 04/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=vy2GjE0LXCkOtOqxaDD7nVP%2fayimMeUK1%2bMbJ9%2bt36b00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
+      <category>CNMV DIRECTIVOS</category>
+    </item>
+    <item>
+      <title>05/11/2026 | CNMV DIRECTIVOS | RENTA 4 BANCO, S.A. | Pedro Angel Navarro | COMPRA: 123 acciones | 22,0000 EUR | Operación: 04/11/2026 | XMAD</title>
+      <link>https://www.cnmv.es/webservices/verdocumento/ver?e=vy2GjE0LXCkOtOqxaDD7nU8CNJMvkLxcA4YeWNeiqsr00jEuhbk%2bTc0vHNC%2bVxBv</link>
+      <guid isPermaLink="false">21e85e69705e6cadce66a4b8381a5c9e4c954ac25aadc260a39109da5127ed6e</guid>
+      <pubDate>Thu, 05 Nov 2026 11:00:00 +0000</pubDate>
+      <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 05/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; RENTA 4 BANCO, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; Pedro Angel Navarro&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026142004&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Compra:&lt;/strong&gt; 123 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 22,0000 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 04/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=vy2GjE0LXCkOtOqxaDD7nU8CNJMvkLxcA4YeWNeiqsr00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
+      <category>CNMV DIRECTIVOS</category>
+    </item>
+    <item>
+      <title>05/11/2026 | CNMV DIRECTIVOS | RENTA 4 BANCO, S.A. | Jose Ramón Rubio Laporta | COMPRA: 123 acciones | 22,0000 EUR | Operación: 04/11/2026 | XMAD</title>
+      <link>https://www.cnmv.es/webservices/verdocumento/ver?e=vy2GjE0LXCkOtOqxaDD7nV5Rsaf91hgzM3iX0jAAzAP00jEuhbk%2bTc0vHNC%2bVxBv</link>
+      <guid isPermaLink="false">5da0bf883a3d06e0b785247355a6e420898e0b3962df76f060f32ad224e27364</guid>
+      <pubDate>Thu, 05 Nov 2026 11:00:00 +0000</pubDate>
+      <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 05/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; RENTA 4 BANCO, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; Jose Ramón Rubio Laporta&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026142005&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Compra:&lt;/strong&gt; 123 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 22,0000 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 04/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=vy2GjE0LXCkOtOqxaDD7nV5Rsaf91hgzM3iX0jAAzAP00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
+      <category>CNMV DIRECTIVOS</category>
+    </item>
+    <item>
+      <title>05/11/2026 | CNMV DIRECTIVOS | RENTA 4 BANCO, S.A. | Ines Juste Bellosillo | COMPRA: 123 acciones | 22,0000 EUR | Operación: 04/11/2026 | XMAD</title>
+      <link>https://www.cnmv.es/webservices/verdocumento/ver?e=vy2GjE0LXCkOtOqxaDD7nfwfTiVYqBcsPoRNb8F2zkv00jEuhbk%2bTc0vHNC%2bVxBv</link>
+      <guid isPermaLink="false">dab569f44ed6ca3f933a7f90b72610b1234413e51ebc0c442ebc29bb747cd564</guid>
+      <pubDate>Thu, 05 Nov 2026 11:00:00 +0000</pubDate>
+      <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 05/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; RENTA 4 BANCO, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; Ines Juste Bellosillo&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026142006&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Compra:&lt;/strong&gt; 123 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 22,0000 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 04/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=vy2GjE0LXCkOtOqxaDD7nfwfTiVYqBcsPoRNb8F2zkv00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
+      <category>CNMV DIRECTIVOS</category>
+    </item>
+    <item>
+      <title>05/11/2026 | CNMV DIRECTIVOS | RENTA 4 BANCO, S.A. | Eduardo Chacón López | COMPRA: 98 acciones | 22,0000 EUR | Operación: 04/11/2026 | XMAD</title>
+      <link>https://www.cnmv.es/webservices/verdocumento/ver?e=vy2GjE0LXCkOtOqxaDD7nYfiEkeVGBdzuYdj5nuHBf300jEuhbk%2bTc0vHNC%2bVxBv</link>
+      <guid isPermaLink="false">727b4e6d26e97f146abe93a811fe3f60fdb20be575fee92bd31a961dec48dc82</guid>
+      <pubDate>Thu, 05 Nov 2026 11:00:00 +0000</pubDate>
+      <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 05/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; RENTA 4 BANCO, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; Eduardo Chacón López&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026142010&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Compra:&lt;/strong&gt; 98 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 22,0000 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 04/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=vy2GjE0LXCkOtOqxaDD7nYfiEkeVGBdzuYdj5nuHBf300jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
+      <category>CNMV DIRECTIVOS</category>
+    </item>
+    <item>
+      <title>05/11/2026 | CNMV DIRECTIVOS | RENTA 4 BANCO, S.A. | Maria del Pino Velázquez Medina | COMPRA: 123 acciones | 22,0000 EUR | Operación: 04/11/2026 | XMAD</title>
+      <link>https://www.cnmv.es/webservices/verdocumento/ver?e=vy2GjE0LXCkOtOqxaDD7nRMvatwZI6BXFGaXyRitKSj00jEuhbk%2bTc0vHNC%2bVxBv</link>
+      <guid isPermaLink="false">341a646c117ba5b22b1b4ef43f5487675d04aec16d046350b31ae63ca2718c89</guid>
+      <pubDate>Thu, 05 Nov 2026 11:00:00 +0000</pubDate>
+      <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 05/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; RENTA 4 BANCO, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; Maria del Pino Velázquez Medina&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026142012&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Compra:&lt;/strong&gt; 123 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 22,0000 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 04/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=vy2GjE0LXCkOtOqxaDD7nRMvatwZI6BXFGaXyRitKSj00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
+      <category>CNMV DIRECTIVOS</category>
+    </item>
+    <item>
+      <title>05/11/2026 | CNMV DIRECTIVOS | RENTA 4 BANCO, S.A. | PILAR GARCIA CEBALLOS- ZUÑIGA | COMPRA: 123 acciones | 22,0000 EUR | Operación: 04/11/2026 | XMAD</title>
+      <link>https://www.cnmv.es/webservices/verdocumento/ver?e=vy2GjE0LXCkOtOqxaDD7nSGUwfNK4Vy1nTt%2bKAkY0iT00jEuhbk%2bTc0vHNC%2bVxBv</link>
+      <guid isPermaLink="false">33e85543b6f2b95e856fa853a9d9453cbb6217d5c63e869084f3a4eb228bab38</guid>
+      <pubDate>Thu, 05 Nov 2026 11:00:00 +0000</pubDate>
+      <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 05/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; RENTA 4 BANCO, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; PILAR GARCIA CEBALLOS- ZUÑIGA&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026142017&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Compra:&lt;/strong&gt; 123 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 22,0000 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 04/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=vy2GjE0LXCkOtOqxaDD7nSGUwfNK4Vy1nTt%2bKAkY0iT00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
+      <category>CNMV DIRECTIVOS</category>
+    </item>
+    <item>
+      <title>05/11/2026 | CNMV DIRECTIVOS | RENTA 4 BANCO, S.A. | GEMMA AZNAR CORNEJO | COMPRA: 123 acciones | 22,0000 EUR | Operación: 04/11/2026 | XMAD</title>
+      <link>https://www.cnmv.es/webservices/verdocumento/ver?e=vy2GjE0LXCkOtOqxaDD7nUgSTiWkKLdGDdfEak8G%2fVX00jEuhbk%2bTc0vHNC%2bVxBv</link>
+      <guid isPermaLink="false">78581a08aff873227a0a249659233596c6bffcc6fd5ada4444426b0568d15045</guid>
+      <pubDate>Thu, 05 Nov 2026 11:00:00 +0000</pubDate>
+      <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 05/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; RENTA 4 BANCO, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; GEMMA AZNAR CORNEJO&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026142019&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Compra:&lt;/strong&gt; 123 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 22,0000 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 04/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=vy2GjE0LXCkOtOqxaDD7nUgSTiWkKLdGDdfEak8G%2fVX00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
       <category>CNMV DIRECTIVOS</category>
     </item>
     <item>
