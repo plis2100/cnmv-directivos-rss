@@ -1,5 +1,35 @@
 [
   {
+    "id": "ba0aeaedd1032b5d0a00a08390865f3bebfaea6fff0b9cb43c97c281f4200905",
+    "registro": "2026141894",
+    "titulo": "05/11/2026 | CNMV DIRECTIVOS | EBRO FOODS, S.A. | CORPORACIÓN ECONÓMICA DELTA, S.A. | COMPRA: 5.000 acciones | 17,9000 EUR | Operación: 04/11/2026 | XMAD | +2 operaciones",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=gGmSmdTlNyfzIJ7VfHDti8X24sevtYexcqrtzBo0SpX00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A47412333",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=gGmSmdTlNyfzIJ7VfHDti8X24sevtYexcqrtzBo0SpX00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 05/11/2026</p><p><strong>Empresa:</strong> EBRO FOODS, S.A.</p><p><strong>Declarante:</strong> CORPORACIÓN ECONÓMICA DELTA, S.A.</p><p><strong>Número de registro:</strong> 2026141894</p><p><strong>Motivo:</strong> Persona Estrechamente Vinculada</p><hr><p><strong>OPERACIONES DECLARADAS</strong></p><ul><li><strong>Compra:</strong> 5.000 acciones; <strong>precio:</strong> 17,9000 EUR; <strong>fecha de operación:</strong> 04/11/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Compra:</strong> 1.516 acciones; <strong>precio:</strong> 17,9800 EUR; <strong>fecha de operación:</strong> 04/11/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Compra:</strong> 484 acciones; <strong>precio:</strong> 18,0000 EUR; <strong>fecha de operación:</strong> 04/11/2026; <strong>mercado:</strong> XMAD.</li></ul><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=gGmSmdTlNyfzIJ7VfHDti8X24sevtYexcqrtzBo0SpX00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-11-05T12:00:00+01:00",
+    "empresa": "EBRO FOODS, S.A.",
+    "declarante": "CORPORACIÓN ECONÓMICA DELTA, S.A.",
+    "fecha_texto": "05/11/2026",
+    "motivo": "Persona Estrechamente Vinculada",
+    "detalle_extraido": true
+  },
+  {
+    "id": "33b19412e3dea0495d92618e8d63d5457bf17d24768b474341f2a98de5323fcb",
+    "registro": "2026141768",
+    "titulo": "05/11/2026 | CNMV DIRECTIVOS | FLUIDRA, S.A. | NICOLÁS MARTÍNEZ FERNÁNDEZ | VENTA: 600 acciones | 19,4700 EUR | Operación: 03/11/2026 | XMAD",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=d9bGEIgi2BXIpNjKtCGanX3rFEIY5zD0wyVMtmF%2fkGn00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A-17728593",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=d9bGEIgi2BXIpNjKtCGanX3rFEIY5zD0wyVMtmF%2fkGn00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 05/11/2026</p><p><strong>Empresa:</strong> FLUIDRA, S.A.</p><p><strong>Declarante:</strong> NICOLÁS MARTÍNEZ FERNÁNDEZ</p><p><strong>Número de registro:</strong> 2026141768</p><p><strong>Motivo:</strong> Persona con Responsabilidad de Dirección</p><hr><p><strong>OPERACIONES DECLARADAS</strong></p><ul><li><strong>Venta:</strong> 600 acciones; <strong>precio:</strong> 19,4700 EUR; <strong>fecha de operación:</strong> 03/11/2026; <strong>mercado:</strong> XMAD.</li></ul><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=d9bGEIgi2BXIpNjKtCGanX3rFEIY5zD0wyVMtmF%2fkGn00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-11-05T12:00:00+01:00",
+    "empresa": "FLUIDRA, S.A.",
+    "declarante": "NICOLÁS MARTÍNEZ FERNÁNDEZ",
+    "fecha_texto": "05/11/2026",
+    "motivo": "Persona con Responsabilidad de Dirección",
+    "detalle_extraido": true
+  },
+  {
     "id": "da202ca94c7bf2570b64a5a8ae317f69bd7e13ecada55aa11a113c3ad7153130",
     "registro": "2026141050",
     "titulo": "04/11/2026 | CNMV DIRECTIVOS | TSK ELECTRONICA Y ELECTRICIDAD, S.A. | PEDRO ENRIQUE SUAREZ LOPEZ | COMPRA: 6.931 acciones | 0,0000 EUR | Operación: 30/10/2026 | XOFF",
