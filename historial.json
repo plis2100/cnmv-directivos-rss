@@ -45,6 +45,36 @@
     "detalle_extraido": true
   },
   {
+    "id": "d92cce689ada9e612398fa6b4a6087b2f351f89c379ea335e1c4424e11d50c5e",
+    "registro": "2026143595",
+    "titulo": "11/11/2026 | CNMV DIRECTIVOS | FLUIDRA, S.A. | BRUCE WALKER BROOKS | VENTA: 10.799 acciones | 19,6300 EUR | Operación: 10/11/2026 | XMAD",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=lWM9DeeScs%2fDdnBA0AjbS3RvH39zBaraWdf%2bHm5inaX00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A-17728593",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=lWM9DeeScs%2fDdnBA0AjbS3RvH39zBaraWdf%2bHm5inaX00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 11/11/2026</p><p><strong>Empresa:</strong> FLUIDRA, S.A.</p><p><strong>Declarante:</strong> BRUCE WALKER BROOKS</p><p><strong>Número de registro:</strong> 2026143595</p><p><strong>Motivo:</strong> Persona con Responsabilidad de Dirección</p><hr><p><strong>OPERACIONES DECLARADAS</strong></p><ul><li><strong>Venta:</strong> 10.799 acciones; <strong>precio:</strong> 19,6300 EUR; <strong>fecha de operación:</strong> 10/11/2026; <strong>mercado:</strong> XMAD.</li></ul><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=lWM9DeeScs%2fDdnBA0AjbS3RvH39zBaraWdf%2bHm5inaX00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-11-11T12:00:00+01:00",
+    "empresa": "FLUIDRA, S.A.",
+    "declarante": "BRUCE WALKER BROOKS",
+    "fecha_texto": "11/11/2026",
+    "motivo": "Persona con Responsabilidad de Dirección",
+    "detalle_extraido": true
+  },
+  {
+    "id": "ee3ddc723c8f8e8e88c4e8059a662560d9b93e85eda2599208a3a5f82c1f195b",
+    "registro": "2026143588",
+    "titulo": "11/11/2026 | CNMV DIRECTIVOS | IBERDROLA, S.A. | Monasterio de San Pelayo, S.L. | VENTA: 10.000 acciones | 22,9000 EUR | Operación: 09/11/2026 | XMAD | +3 operaciones",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=lWM9DeeScs%2fDdnBA0AjbS1RT5nS4d97oJKCY9W4ifdX00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A-48010615",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=lWM9DeeScs%2fDdnBA0AjbS1RT5nS4d97oJKCY9W4ifdX00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 11/11/2026</p><p><strong>Empresa:</strong> IBERDROLA, S.A.</p><p><strong>Declarante:</strong> Monasterio de San Pelayo, S.L.</p><p><strong>Número de registro:</strong> 2026143588</p><p><strong>Motivo:</strong> Persona Estrechamente Vinculada</p><hr><p><strong>OPERACIONES DECLARADAS</strong></p><ul><li><strong>Venta:</strong> 10.000 acciones; <strong>precio:</strong> 22,9000 EUR; <strong>fecha de operación:</strong> 09/11/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Venta:</strong> 12.000 acciones; <strong>precio:</strong> 22,9400 EUR; <strong>fecha de operación:</strong> 09/11/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Venta:</strong> 10.000 acciones; <strong>precio:</strong> 22,9600 EUR; <strong>fecha de operación:</strong> 09/11/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Venta:</strong> 12.000 acciones; <strong>precio:</strong> 22,9500 EUR; <strong>fecha de operación:</strong> 09/11/2026; <strong>mercado:</strong> XMAD.</li></ul><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=lWM9DeeScs%2fDdnBA0AjbS1RT5nS4d97oJKCY9W4ifdX00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-11-11T12:00:00+01:00",
+    "empresa": "IBERDROLA, S.A.",
+    "declarante": "Monasterio de San Pelayo, S.L.",
+    "fecha_texto": "11/11/2026",
+    "motivo": "Persona Estrechamente Vinculada",
+    "detalle_extraido": true
+  },
+  {
     "id": "2fd13c4909671f3e1f50421e487df9594c48fbba2add8abb74811168ed300b0a",
     "registro": "2026142730",
     "titulo": "10/11/2026 | CNMV DIRECTIVOS | CIRSA ENTERPRISES, S.A. | JUAN IGNACIO GRAU TRULLAS | VENTA: 6.452 acciones | 20,0000 EUR | Operación: 09/11/2026 | XMAD | +1 operaciones",
