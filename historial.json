@@ -75,6 +75,21 @@
     "detalle_extraido": true
   },
   {
+    "id": "d0b76b42d1e037501b82462b9477a53ead51e8a2352b83f1314097fe0ce629e7",
+    "registro": "2026144849",
+    "titulo": "16/11/2026 | CNMV DIRECTIVOS | PUIG BRANDS, S.A. | Thomas James | VENTA: 2.000 acciones | 20,1800 EUR | Operación: 12/11/2026 | XMAD",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=8zFwByqznX4TMK7UfcQ8mQPN8DZMviCzagnEfYwj01n00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A66674904",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=8zFwByqznX4TMK7UfcQ8mQPN8DZMviCzagnEfYwj01n00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 16/11/2026</p><p><strong>Empresa:</strong> PUIG BRANDS, S.A.</p><p><strong>Declarante:</strong> Thomas James</p><p><strong>Número de registro:</strong> 2026144849</p><p><strong>Motivo:</strong> Persona con Responsabilidad de Dirección</p><hr><p><strong>OPERACIONES DECLARADAS</strong></p><ul><li><strong>Venta:</strong> 2.000 acciones; <strong>precio:</strong> 20,1800 EUR; <strong>fecha de operación:</strong> 12/11/2026; <strong>mercado:</strong> XMAD.</li></ul><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=8zFwByqznX4TMK7UfcQ8mQPN8DZMviCzagnEfYwj01n00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-11-16T12:00:00+01:00",
+    "empresa": "PUIG BRANDS, S.A.",
+    "declarante": "Thomas James",
+    "fecha_texto": "16/11/2026",
+    "motivo": "Persona con Responsabilidad de Dirección",
+    "detalle_extraido": true
+  },
+  {
     "id": "7c937514b07fe2d1fc1e4bfb724c694dbcb337897bd50721a5b2d5d882962f10",
     "registro": "2026144105",
     "titulo": "13/11/2026 | CNMV DIRECTIVOS | MAPFRE, S.A. | Carla Taboada Diez",

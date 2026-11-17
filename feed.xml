@@ -5,7 +5,7 @@
     <link>https://www.cnmv.es/portal/Consultas/Directivos-Consulta</link>
     <description>Operaciones de directivos y personas vinculadas publicadas por la CNMV.</description>
     <language>es-ES</language>
-    <lastBuildDate>Mon, 16 Nov 2026 18:41:03 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 03:02:07 +0000</lastBuildDate>
     <ttl>120</ttl>
     <atom:link href="https://raw.githubusercontent.com/plis2100/cnmv-directivos-rss/main/feed.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -46,6 +46,14 @@
       <guid isPermaLink="false">d1c4e3d7e6eb5876f25419dcd869d6d638bf328ce9d1247a4ac97027afa055ec</guid>
       <pubDate>Mon, 16 Nov 2026 11:00:00 +0000</pubDate>
       <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 16/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; TSK ELECTRONICA Y ELECTRICIDAD, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; Pablo García Fernández&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026144722&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;Operaciones:&lt;/strong&gt; no se pudieron extraer automáticamente del documento.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=g9Y9V%2fgPBi4%2fdGiBgvJJmoifH4WRYBHcmvHj21hdJz300jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
+      <category>CNMV DIRECTIVOS</category>
+    </item>
+    <item>
+      <title>16/11/2026 | CNMV DIRECTIVOS | PUIG BRANDS, S.A. | Thomas James | VENTA: 2.000 acciones | 20,1800 EUR | Operación: 12/11/2026 | XMAD</title>
+      <link>https://www.cnmv.es/webservices/verdocumento/ver?e=8zFwByqznX4TMK7UfcQ8mQPN8DZMviCzagnEfYwj01n00jEuhbk%2bTc0vHNC%2bVxBv</link>
+      <guid isPermaLink="false">d0b76b42d1e037501b82462b9477a53ead51e8a2352b83f1314097fe0ce629e7</guid>
+      <pubDate>Mon, 16 Nov 2026 11:00:00 +0000</pubDate>
+      <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 16/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; PUIG BRANDS, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; Thomas James&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026144849&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Venta:&lt;/strong&gt; 2.000 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 20,1800 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 12/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=8zFwByqznX4TMK7UfcQ8mQPN8DZMviCzagnEfYwj01n00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
       <category>CNMV DIRECTIVOS</category>
     </item>
     <item>
