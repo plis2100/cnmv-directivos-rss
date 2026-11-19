@@ -5,7 +5,7 @@
     <link>https://www.cnmv.es/portal/Consultas/Directivos-Consulta</link>
     <description>Operaciones de directivos y personas vinculadas publicadas por la CNMV.</description>
     <language>es-ES</language>
-    <lastBuildDate>Wed, 18 Nov 2026 17:21:37 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 00:32:36 +0000</lastBuildDate>
     <ttl>120</ttl>
     <atom:link href="https://raw.githubusercontent.com/plis2100/cnmv-directivos-rss/main/feed.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -46,6 +46,46 @@
       <guid isPermaLink="false">8dd1597bce75fdf875b622278df1e0c6a00eb767d25ccafac1daf024298d0418</guid>
       <pubDate>Wed, 18 Nov 2026 11:00:00 +0000</pubDate>
       <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 18/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; REPSOL, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; SUSANA MESEGUER CALAS&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026145740&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Compra:&lt;/strong&gt; 33 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 30,4100 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 16/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=fruwjo9spmW3qr5ZTBextTIwDCd3qfmxa3d0pVXc9U300jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
+      <category>CNMV DIRECTIVOS</category>
+    </item>
+    <item>
+      <title>18/11/2026 | CNMV DIRECTIVOS | FLUIDRA, S.A. | CLARA VALERA JAQUES | COMPRA: 25 acciones | 19,3000 EUR | Operación: 16/11/2026 | XMAD</title>
+      <link>https://www.cnmv.es/webservices/verdocumento/ver?e=79sXUDe2C7NiLiNtUnQ4EGB1%2bmkrmpuOlWFNqG3wOan00jEuhbk%2bTc0vHNC%2bVxBv</link>
+      <guid isPermaLink="false">c72362220e616b5acfa7da916b17c1f61d11053e8bac75dc562a212f5a51fdc1</guid>
+      <pubDate>Wed, 18 Nov 2026 11:00:00 +0000</pubDate>
+      <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 18/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; FLUIDRA, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; CLARA VALERA JAQUES&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026146046&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Compra:&lt;/strong&gt; 25 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 19,3000 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 16/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=79sXUDe2C7NiLiNtUnQ4EGB1%2bmkrmpuOlWFNqG3wOan00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
+      <category>CNMV DIRECTIVOS</category>
+    </item>
+    <item>
+      <title>18/11/2026 | CNMV DIRECTIVOS | FLUIDRA, S.A. | JONATHAN VINER | COMPRA: 38 acciones | 19,3000 EUR | Operación: 16/11/2026 | XMAD</title>
+      <link>https://www.cnmv.es/webservices/verdocumento/ver?e=79sXUDe2C7NiLiNtUnQ4EGVL0KoZDXfNo5TqWwzEp0H00jEuhbk%2bTc0vHNC%2bVxBv</link>
+      <guid isPermaLink="false">0faba1587f471b244129d5f8719b71a75f33c6a7e1ccf3097a09db5b5baba729</guid>
+      <pubDate>Wed, 18 Nov 2026 11:00:00 +0000</pubDate>
+      <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 18/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; FLUIDRA, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; JONATHAN VINER&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026146048&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Compra:&lt;/strong&gt; 38 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 19,3000 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 16/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=79sXUDe2C7NiLiNtUnQ4EGVL0KoZDXfNo5TqWwzEp0H00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
+      <category>CNMV DIRECTIVOS</category>
+    </item>
+    <item>
+      <title>18/11/2026 | CNMV DIRECTIVOS | FLUIDRA, S.A. | NICOLÁS MARTÍNEZ FERNÁNDEZ | COMPRA: 121 acciones | 19,3000 EUR | Operación: 16/11/2026 | XMAD</title>
+      <link>https://www.cnmv.es/webservices/verdocumento/ver?e=79sXUDe2C7NiLiNtUnQ4EAPN8DZMviCzagnEfYwj01n00jEuhbk%2bTc0vHNC%2bVxBv</link>
+      <guid isPermaLink="false">cd7c6ad1174f024be79d2b363d6d45dc69f1e173f3bbb0716a41fc17dbfcc16d</guid>
+      <pubDate>Wed, 18 Nov 2026 11:00:00 +0000</pubDate>
+      <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 18/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; FLUIDRA, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; NICOLÁS MARTÍNEZ FERNÁNDEZ&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026146049&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Compra:&lt;/strong&gt; 121 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 19,3000 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 16/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=79sXUDe2C7NiLiNtUnQ4EAPN8DZMviCzagnEfYwj01n00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
+      <category>CNMV DIRECTIVOS</category>
+    </item>
+    <item>
+      <title>18/11/2026 | CNMV DIRECTIVOS | FLUIDRA, S.A. | SANDRA SOFIA TAVARES DA SILVA | COMPRA: 30 acciones | 19,3000 EUR | Operación: 16/11/2026 | XMAD</title>
+      <link>https://www.cnmv.es/webservices/verdocumento/ver?e=79sXUDe2C7NiLiNtUnQ4EOlpuTeaB4JjS8UZc75vPkX00jEuhbk%2bTc0vHNC%2bVxBv</link>
+      <guid isPermaLink="false">a0a5f6267eb9eb4498a86bdd9ce2af710bba5e34f90e39b6ff0875b6792125e7</guid>
+      <pubDate>Wed, 18 Nov 2026 11:00:00 +0000</pubDate>
+      <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 18/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; FLUIDRA, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; SANDRA SOFIA TAVARES DA SILVA&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026146051&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Compra:&lt;/strong&gt; 30 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 19,3000 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 16/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=79sXUDe2C7NiLiNtUnQ4EOlpuTeaB4JjS8UZc75vPkX00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
+      <category>CNMV DIRECTIVOS</category>
+    </item>
+    <item>
+      <title>18/11/2026 | CNMV DIRECTIVOS | FLUIDRA, S.A. | JAVIER TINTORÉ SEGURA | COMPRA: 121 acciones | 19,3000 EUR | Operación: 16/11/2026 | XMAD</title>
+      <link>https://www.cnmv.es/webservices/verdocumento/ver?e=79sXUDe2C7NiLiNtUnQ4ELa4oqTesDKefcGGyhPHwIH00jEuhbk%2bTc0vHNC%2bVxBv</link>
+      <guid isPermaLink="false">303d02548cfa02620a2171af6dba5ae0a4933e8162c1bd7ea1054f292c2337a9</guid>
+      <pubDate>Wed, 18 Nov 2026 11:00:00 +0000</pubDate>
+      <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 18/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; FLUIDRA, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; JAVIER TINTORÉ SEGURA&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026146054&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Compra:&lt;/strong&gt; 121 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 19,3000 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 16/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=79sXUDe2C7NiLiNtUnQ4ELa4oqTesDKefcGGyhPHwIH00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
       <category>CNMV DIRECTIVOS</category>
     </item>
     <item>
