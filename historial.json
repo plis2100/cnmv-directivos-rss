@@ -75,6 +75,21 @@
     "detalle_extraido": true
   },
   {
+    "id": "a672477ccc95ea2ba684020e902f9afc35cb5abb1b237164245ec85e5e137e1c",
+    "registro": "2026146451",
+    "titulo": "19/11/2026 | CNMV DIRECTIVOS | VISCOFAN, S.A. | SANTIAGO DOMECQ BOHORQUEZ | VENTA: 8.000 acciones | 59,7700 EUR | Operación: 05/03/2026 | XMAD | +2 operaciones",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=j1708qEUQk%2bC6thj1AszEOlpuTeaB4JjS8UZc75vPkX00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A-31065501",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=j1708qEUQk%2bC6thj1AszEOlpuTeaB4JjS8UZc75vPkX00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 19/11/2026</p><p><strong>Empresa:</strong> VISCOFAN, S.A.</p><p><strong>Declarante:</strong> SANTIAGO DOMECQ BOHORQUEZ</p><p><strong>Número de registro:</strong> 2026146451</p><p><strong>Motivo:</strong> Persona con Responsabilidad de Dirección</p><hr><p><strong>OPERACIONES DECLARADAS</strong></p><ul><li><strong>Venta:</strong> 8.000 acciones; <strong>precio:</strong> 59,7700 EUR; <strong>fecha de operación:</strong> 05/03/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Venta:</strong> 1.191 acciones; <strong>precio:</strong> 56,4200 EUR; <strong>fecha de operación:</strong> 16/11/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Venta:</strong> 6.785 acciones; <strong>precio:</strong> 56,2200 EUR; <strong>fecha de operación:</strong> 17/11/2026; <strong>mercado:</strong> XMAD.</li></ul><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=j1708qEUQk%2bC6thj1AszEOlpuTeaB4JjS8UZc75vPkX00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-11-19T12:00:00+01:00",
+    "empresa": "VISCOFAN, S.A.",
+    "declarante": "SANTIAGO DOMECQ BOHORQUEZ",
+    "fecha_texto": "19/11/2026",
+    "motivo": "Persona con Responsabilidad de Dirección",
+    "detalle_extraido": true
+  },
+  {
     "id": "da2f209294bfa028cf6df028aed7d2b452924d17a486886066a3d003f5161c3f",
     "registro": "2026145733",
     "titulo": "18/11/2026 | CNMV DIRECTIVOS | REPSOL, S.A. | LUIS CABRA DUEÑAS | COMPRA: 33 acciones | 30,4100 EUR | Operación: 16/11/2026 | XMAD",

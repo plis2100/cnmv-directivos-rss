@@ -5,7 +5,7 @@
     <link>https://www.cnmv.es/portal/Consultas/Directivos-Consulta</link>
     <description>Operaciones de directivos y personas vinculadas publicadas por la CNMV.</description>
     <language>es-ES</language>
-    <lastBuildDate>Thu, 19 Nov 2026 10:29:53 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 20:48:26 +0000</lastBuildDate>
     <ttl>120</ttl>
     <atom:link href="https://raw.githubusercontent.com/plis2100/cnmv-directivos-rss/main/feed.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -46,6 +46,14 @@
       <guid isPermaLink="false">ed7307e56db9cd9b2f3b9fb83ef56b1dd939fc90c6f7e7ae2ead3bcbe61b4648</guid>
       <pubDate>Thu, 19 Nov 2026 11:00:00 +0000</pubDate>
       <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 19/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; FLUIDRA, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; JAVIER RAMÍREZ GARCÍA&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026146300&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Compra:&lt;/strong&gt; 153 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 17,3200 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 15/10/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=uGi2%2by%2f1hB9qwvHMx8hbReZGn91mcAWvbd7wfZABYrn00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
+      <category>CNMV DIRECTIVOS</category>
+    </item>
+    <item>
+      <title>19/11/2026 | CNMV DIRECTIVOS | VISCOFAN, S.A. | SANTIAGO DOMECQ BOHORQUEZ | VENTA: 8.000 acciones | 59,7700 EUR | Operación: 05/03/2026 | XMAD | +2 operaciones</title>
+      <link>https://www.cnmv.es/webservices/verdocumento/ver?e=j1708qEUQk%2bC6thj1AszEOlpuTeaB4JjS8UZc75vPkX00jEuhbk%2bTc0vHNC%2bVxBv</link>
+      <guid isPermaLink="false">a672477ccc95ea2ba684020e902f9afc35cb5abb1b237164245ec85e5e137e1c</guid>
+      <pubDate>Thu, 19 Nov 2026 11:00:00 +0000</pubDate>
+      <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 19/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; VISCOFAN, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; SANTIAGO DOMECQ BOHORQUEZ&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026146451&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Venta:&lt;/strong&gt; 8.000 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 59,7700 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 05/03/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Venta:&lt;/strong&gt; 1.191 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 56,4200 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 16/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Venta:&lt;/strong&gt; 6.785 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 56,2200 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 17/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=j1708qEUQk%2bC6thj1AszEOlpuTeaB4JjS8UZc75vPkX00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
       <category>CNMV DIRECTIVOS</category>
     </item>
     <item>
