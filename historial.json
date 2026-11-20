@@ -1,5 +1,35 @@
 [
   {
+    "id": "b0baf84074c46e51e17160754cf725a5685069af9049434468835341df595f54",
+    "registro": "2026146799",
+    "titulo": "20/11/2026 | CNMV DIRECTIVOS | EBRO FOODS, S.A. | CORPORACIÓN ECONÓMICA DELTA, S.A. | COMPRA: 5.000 acciones | 17,8400 EUR | Operación: 19/11/2026 | XMAD | +2 operaciones",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=MmVeN%2fauxqCQg1RttiUyWt%2byb3redsJF57tfqWylHRX00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A47412333",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=MmVeN%2fauxqCQg1RttiUyWt%2byb3redsJF57tfqWylHRX00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 20/11/2026</p><p><strong>Empresa:</strong> EBRO FOODS, S.A.</p><p><strong>Declarante:</strong> CORPORACIÓN ECONÓMICA DELTA, S.A.</p><p><strong>Número de registro:</strong> 2026146799</p><p><strong>Motivo:</strong> Persona Estrechamente Vinculada</p><hr><p><strong>OPERACIONES DECLARADAS</strong></p><ul><li><strong>Compra:</strong> 5.000 acciones; <strong>precio:</strong> 17,8400 EUR; <strong>fecha de operación:</strong> 19/11/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Compra:</strong> 5.000 acciones; <strong>precio:</strong> 17,7800 EUR; <strong>fecha de operación:</strong> 19/11/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Compra:</strong> 5.000 acciones; <strong>precio:</strong> 17,7600 EUR; <strong>fecha de operación:</strong> 19/11/2026; <strong>mercado:</strong> XMAD.</li></ul><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=MmVeN%2fauxqCQg1RttiUyWt%2byb3redsJF57tfqWylHRX00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-11-20T12:00:00+01:00",
+    "empresa": "EBRO FOODS, S.A.",
+    "declarante": "CORPORACIÓN ECONÓMICA DELTA, S.A.",
+    "fecha_texto": "20/11/2026",
+    "motivo": "Persona Estrechamente Vinculada",
+    "detalle_extraido": true
+  },
+  {
+    "id": "8320546b4499f719b33239049a96c5ee52c7c30d7d13ac052e94e53d47648357",
+    "registro": "2026146779",
+    "titulo": "20/11/2026 | CNMV DIRECTIVOS | MIQUEL Y COSTAS & MIQUEL, S.A. | HACIA S.A. | COMPRA: 5.000 acciones | 9,9200 EUR | Operación: 19/11/2026 | XMAD | +1 operaciones",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=MmVeN%2fauxqCQg1RttiUyWlFkhbj4qO%2bWArJEeUkfuX700jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A-08020729",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=MmVeN%2fauxqCQg1RttiUyWlFkhbj4qO%2bWArJEeUkfuX700jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 20/11/2026</p><p><strong>Empresa:</strong> MIQUEL Y COSTAS &amp; MIQUEL, S.A.</p><p><strong>Declarante:</strong> HACIA S.A.</p><p><strong>Número de registro:</strong> 2026146779</p><p><strong>Motivo:</strong> Persona Estrechamente Vinculada</p><hr><p><strong>OPERACIONES DECLARADAS</strong></p><ul><li><strong>Compra:</strong> 5.000 acciones; <strong>precio:</strong> 9,9200 EUR; <strong>fecha de operación:</strong> 19/11/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Compra:</strong> 4.000 acciones; <strong>precio:</strong> 9,9600 EUR; <strong>fecha de operación:</strong> 19/11/2026; <strong>mercado:</strong> XMAD.</li></ul><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=MmVeN%2fauxqCQg1RttiUyWlFkhbj4qO%2bWArJEeUkfuX700jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-11-20T12:00:00+01:00",
+    "empresa": "MIQUEL Y COSTAS & MIQUEL, S.A.",
+    "declarante": "HACIA S.A.",
+    "fecha_texto": "20/11/2026",
+    "motivo": "Persona Estrechamente Vinculada",
+    "detalle_extraido": true
+  },
+  {
     "id": "81114b3e33c3a6a62eea0efe24de546915ecec79edcb61b2466e01f61ee903b5",
     "registro": "2026146219",
     "titulo": "19/11/2026 | CNMV DIRECTIVOS | EBRO FOODS, S.A. | CORPORACIÓN ECONÓMICA DELTA, S.A. | COMPRA: 5.000 acciones | 17,9000 EUR | Operación: 18/11/2026 | XMAD",
