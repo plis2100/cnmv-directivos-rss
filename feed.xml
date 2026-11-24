@@ -5,7 +5,7 @@
     <link>https://www.cnmv.es/portal/Consultas/Directivos-Consulta</link>
     <description>Operaciones de directivos y personas vinculadas publicadas por la CNMV.</description>
     <language>es-ES</language>
-    <lastBuildDate>Mon, 23 Nov 2026 20:20:43 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 04:51:34 +0000</lastBuildDate>
     <ttl>120</ttl>
     <atom:link href="https://raw.githubusercontent.com/plis2100/cnmv-directivos-rss/main/feed.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -70,6 +70,30 @@
       <guid isPermaLink="false">c9d9c517825ac8ddb00fb6c1abfed60a656013947d430b4f7d0d1e509881a872</guid>
       <pubDate>Mon, 23 Nov 2026 11:00:00 +0000</pubDate>
       <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 23/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; VISCOFAN, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; SANTIAGO DOMECQ BOHORQUEZ&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026147656&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Venta:&lt;/strong&gt; 2.500 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 56,0700 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 18/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Venta:&lt;/strong&gt; 2.292 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 54,7300 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 19/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Venta:&lt;/strong&gt; 4.679 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 54,9400 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 20/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=%2bIpcmwtFW3UwWcE6pDQgx2JXV9j8bs8uEgJZXHGaB8j00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
+      <category>CNMV DIRECTIVOS</category>
+    </item>
+    <item>
+      <title>23/11/2026 | CNMV DIRECTIVOS | IZERTIS, S.A. | TERMINUS ASSETS, S.L. | COMPRA: 4.000 acciones | 7,0600 EUR | Operación: 20/11/2026 | XMAD</title>
+      <link>https://www.cnmv.es/webservices/verdocumento/ver?e=wQTD8Yno3iUUBeOpNCvIFdLrY%2ffo3OYFoHD4Vp4CvPn00jEuhbk%2bTc0vHNC%2bVxBv</link>
+      <guid isPermaLink="false">71e02e6b0bc3463be6fabc6ef0436a2f3b931c94345454a8c0beb50c1dc1605e</guid>
+      <pubDate>Mon, 23 Nov 2026 11:00:00 +0000</pubDate>
+      <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 23/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; IZERTIS, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; TERMINUS ASSETS, S.L.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026147731&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona Estrechamente Vinculada&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Compra:&lt;/strong&gt; 4.000 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 7,0600 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 20/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=wQTD8Yno3iUUBeOpNCvIFdLrY%2ffo3OYFoHD4Vp4CvPn00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
+      <category>CNMV DIRECTIVOS</category>
+    </item>
+    <item>
+      <title>23/11/2026 | CNMV DIRECTIVOS | IZERTIS, S.A. | IZCARDI, S.L. | COMPRA: 2.500 acciones | 7,1900 EUR | Operación: 17/11/2026 | XMAD | +1 operaciones</title>
+      <link>https://www.cnmv.es/webservices/verdocumento/ver?e=wQTD8Yno3iUUBeOpNCvIFeCfSpRPV7j64B3ZwsKKtSj00jEuhbk%2bTc0vHNC%2bVxBv</link>
+      <guid isPermaLink="false">bc3f53eb74ebf37ad8f353d3a4803caf3c1c697e89386ff089c95dc2b5081702</guid>
+      <pubDate>Mon, 23 Nov 2026 11:00:00 +0000</pubDate>
+      <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 23/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; IZERTIS, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; IZCARDI, S.L.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026147730&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona Estrechamente Vinculada&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Compra:&lt;/strong&gt; 2.500 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 7,1900 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 17/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Compra:&lt;/strong&gt; 3.000 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 7,1300 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 18/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XMAD.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=wQTD8Yno3iUUBeOpNCvIFeCfSpRPV7j64B3ZwsKKtSj00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
+      <category>CNMV DIRECTIVOS</category>
+    </item>
+    <item>
+      <title>23/11/2026 | CNMV DIRECTIVOS | PROSEGUR CASH, S.A. | JOSE ANTONIO LASANTA LURI | VENTA: 376 acciones | 0,6800 EUR | Operación: 04/11/2026 | XOFF | +1 operaciones</title>
+      <link>https://www.cnmv.es/webservices/verdocumento/ver?e=wQTD8Yno3iUUBeOpNCvIFY7ZXFhxziiL7WChVXxRB3P00jEuhbk%2bTc0vHNC%2bVxBv</link>
+      <guid isPermaLink="false">d90d0eb15ce99b9bc8cf8b37f4817b451ec2acdbb3af794956e8de51a713decb</guid>
+      <pubDate>Mon, 23 Nov 2026 11:00:00 +0000</pubDate>
+      <description>&lt;p&gt;&lt;strong&gt;FECHA DE PUBLICACIÓN CNMV:&lt;/strong&gt; 23/11/2026&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Empresa:&lt;/strong&gt; PROSEGUR CASH, S.A.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Declarante:&lt;/strong&gt; JOSE ANTONIO LASANTA LURI&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Número de registro:&lt;/strong&gt; 2026147720&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Motivo:&lt;/strong&gt; Persona con Responsabilidad de Dirección&lt;/p&gt;&lt;hr&gt;&lt;p&gt;&lt;strong&gt;OPERACIONES DECLARADAS&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Venta:&lt;/strong&gt; 376 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 0,6800 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 04/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XOFF.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Venta:&lt;/strong&gt; 299.624 acciones; &lt;strong&gt;precio:&lt;/strong&gt; 0,6800 EUR; &lt;strong&gt;fecha de operación:&lt;/strong&gt; 05/11/2026; &lt;strong&gt;mercado:&lt;/strong&gt; XOFF.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;a href="https://www.cnmv.es/webservices/verdocumento/ver?e=wQTD8Yno3iUUBeOpNCvIFY7ZXFhxziiL7WChVXxRB3P00jEuhbk%2bTc0vHNC%2bVxBv"&gt;Abrir documento oficial de la CNMV&lt;/a&gt;&lt;/p&gt;</description>
       <category>CNMV DIRECTIVOS</category>
     </item>
     <item>
