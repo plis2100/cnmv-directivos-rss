@@ -1,5 +1,35 @@
 [
   {
+    "id": "8c6a6f7cd4ec989e63f40a192a8b5b4d125a3362ef5897f1797d4931ab20a2a8",
+    "registro": "2026148146",
+    "titulo": "24/11/2026 | CNMV DIRECTIVOS | EBRO FOODS, S.A. | CORPORACIÓN ECONÓMICA DELTA, S.A. | COMPRA: 6.150 acciones | 17,7400 EUR | Operación: 23/11/2026 | XMAD | +2 operaciones",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=slef0%2f0g9TZ9e%2fk3WeIKAGB1%2bmkrmpuOlWFNqG3wOan00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A47412333",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=slef0%2f0g9TZ9e%2fk3WeIKAGB1%2bmkrmpuOlWFNqG3wOan00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 24/11/2026</p><p><strong>Empresa:</strong> EBRO FOODS, S.A.</p><p><strong>Declarante:</strong> CORPORACIÓN ECONÓMICA DELTA, S.A.</p><p><strong>Número de registro:</strong> 2026148146</p><p><strong>Motivo:</strong> Persona Estrechamente Vinculada</p><hr><p><strong>OPERACIONES DECLARADAS</strong></p><ul><li><strong>Compra:</strong> 6.150 acciones; <strong>precio:</strong> 17,7400 EUR; <strong>fecha de operación:</strong> 23/11/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Compra:</strong> 5.000 acciones; <strong>precio:</strong> 17,7000 EUR; <strong>fecha de operación:</strong> 23/11/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Compra:</strong> 5.000 acciones; <strong>precio:</strong> 17,6600 EUR; <strong>fecha de operación:</strong> 23/11/2026; <strong>mercado:</strong> XMAD.</li></ul><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=slef0%2f0g9TZ9e%2fk3WeIKAGB1%2bmkrmpuOlWFNqG3wOan00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-11-24T12:00:00+01:00",
+    "empresa": "EBRO FOODS, S.A.",
+    "declarante": "CORPORACIÓN ECONÓMICA DELTA, S.A.",
+    "fecha_texto": "24/11/2026",
+    "motivo": "Persona Estrechamente Vinculada",
+    "detalle_extraido": true
+  },
+  {
+    "id": "fd325f1bc4f38fec6f306ae7bbc76e060169197e52573bcebd91d86063dde950",
+    "registro": "2026147847",
+    "titulo": "24/11/2026 | CNMV DIRECTIVOS | MIQUEL Y COSTAS & MIQUEL, S.A. | HACIA S.A. | COMPRA: 2.334 acciones | 9,9000 EUR | Operación: 20/11/2026 | XMAD | +2 operaciones",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=oZbMt4uV0CIMlxnVEjSw8Vr%2bJX%2fUh4M86JKDEILb3VH00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A-08020729",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=oZbMt4uV0CIMlxnVEjSw8Vr%2bJX%2fUh4M86JKDEILb3VH00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 24/11/2026</p><p><strong>Empresa:</strong> MIQUEL Y COSTAS &amp; MIQUEL, S.A.</p><p><strong>Declarante:</strong> HACIA S.A.</p><p><strong>Número de registro:</strong> 2026147847</p><p><strong>Motivo:</strong> Persona Estrechamente Vinculada</p><hr><p><strong>OPERACIONES DECLARADAS</strong></p><ul><li><strong>Compra:</strong> 2.334 acciones; <strong>precio:</strong> 9,9000 EUR; <strong>fecha de operación:</strong> 20/11/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Compra:</strong> 179 acciones; <strong>precio:</strong> 9,8000 EUR; <strong>fecha de operación:</strong> 23/11/2026; <strong>mercado:</strong> XMAD.</li><li><strong>Compra:</strong> 5.000 acciones; <strong>precio:</strong> 9,8800 EUR; <strong>fecha de operación:</strong> 23/11/2026; <strong>mercado:</strong> XMAD.</li></ul><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=oZbMt4uV0CIMlxnVEjSw8Vr%2bJX%2fUh4M86JKDEILb3VH00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-11-24T12:00:00+01:00",
+    "empresa": "MIQUEL Y COSTAS & MIQUEL, S.A.",
+    "declarante": "HACIA S.A.",
+    "fecha_texto": "24/11/2026",
+    "motivo": "Persona Estrechamente Vinculada",
+    "detalle_extraido": true
+  },
+  {
     "id": "a379edd8f4f670a7482a10460d3e84a10eb13a9e435b8b0d400ab069a6deb99d",
     "registro": "2026147678",
     "titulo": "23/11/2026 | CNMV DIRECTIVOS | BANCO SANTANDER, S.A. | GINA DIEZ BARROSO | COMPRA: 9.665 acciones | 10,3700 EUR | Operación: 20/11/2026 | XMAD",
