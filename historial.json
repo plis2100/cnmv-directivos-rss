@@ -45,6 +45,36 @@
     "detalle_extraido": true
   },
   {
+    "id": "1e552c0d8a53508f602fd5f309a769712a086ca3c63afe426e7aa767f8e4c7d5",
+    "registro": "2026148716",
+    "titulo": "25/11/2026 | CNMV DIRECTIVOS | ACS, ACTIVIDADES DE CONSTRUCCION Y SERVICIOS, S.A. | LOURDES MAIZ CARRO | COMPRA: 1.000 acciones | 84,5000 EUR | Operación: 24/11/2026 | XMAD",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=ZBFsENOuBkJh8%2b2Yvn0VKIiCvef9PKKnabPw6gqMoFL00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A-28004885",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=ZBFsENOuBkJh8%2b2Yvn0VKIiCvef9PKKnabPw6gqMoFL00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 25/11/2026</p><p><strong>Empresa:</strong> ACS, ACTIVIDADES DE CONSTRUCCION Y SERVICIOS, S.A.</p><p><strong>Declarante:</strong> LOURDES MAIZ CARRO</p><p><strong>Número de registro:</strong> 2026148716</p><p><strong>Motivo:</strong> Persona con Responsabilidad de Dirección</p><hr><p><strong>OPERACIONES DECLARADAS</strong></p><ul><li><strong>Compra:</strong> 1.000 acciones; <strong>precio:</strong> 84,5000 EUR; <strong>fecha de operación:</strong> 24/11/2026; <strong>mercado:</strong> XMAD.</li></ul><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=ZBFsENOuBkJh8%2b2Yvn0VKIiCvef9PKKnabPw6gqMoFL00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-11-25T12:00:00+01:00",
+    "empresa": "ACS, ACTIVIDADES DE CONSTRUCCION Y SERVICIOS, S.A.",
+    "declarante": "LOURDES MAIZ CARRO",
+    "fecha_texto": "25/11/2026",
+    "motivo": "Persona con Responsabilidad de Dirección",
+    "detalle_extraido": true
+  },
+  {
+    "id": "9691c1ded09b167fd79c43978032058e4b2dc5c533f011ef1b31acdcf01391c7",
+    "registro": "2026148669",
+    "titulo": "25/11/2026 | CNMV DIRECTIVOS | VIDRALA, S.A. | AITOR SALEGUI ESCOLANO",
+    "url": "https://www.cnmv.es/webservices/verdocumento/ver?e=lnVhfLvbAfEHjjWGzA%2b%2ba48FoOBExJFxKs4RCbVNISv00jEuhbk%2bTc0vHNC%2bVxBv",
+    "url_empresa": "https://www.cnmv.es/portal/Consultas/datosentidad.aspx?nif=A01004324",
+    "url_documento": "https://www.cnmv.es/webservices/verdocumento/ver?e=lnVhfLvbAfEHjjWGzA%2b%2ba48FoOBExJFxKs4RCbVNISv00jEuhbk%2bTc0vHNC%2bVxBv",
+    "descripcion": "<p><strong>FECHA DE PUBLICACIÓN CNMV:</strong> 25/11/2026</p><p><strong>Empresa:</strong> VIDRALA, S.A.</p><p><strong>Declarante:</strong> AITOR SALEGUI ESCOLANO</p><p><strong>Número de registro:</strong> 2026148669</p><p><strong>Motivo:</strong> Persona con Responsabilidad de Dirección</p><hr><p><strong>Operaciones:</strong> no se pudieron extraer automáticamente del documento.</p><p><a href=\"https://www.cnmv.es/webservices/verdocumento/ver?e=lnVhfLvbAfEHjjWGzA%2b%2ba48FoOBExJFxKs4RCbVNISv00jEuhbk%2bTc0vHNC%2bVxBv\">Abrir documento oficial de la CNMV</a></p>",
+    "fecha": "2026-11-25T12:00:00+01:00",
+    "empresa": "VIDRALA, S.A.",
+    "declarante": "AITOR SALEGUI ESCOLANO",
+    "fecha_texto": "25/11/2026",
+    "motivo": "Persona con Responsabilidad de Dirección",
+    "detalle_extraido": true
+  },
+  {
     "id": "8c6a6f7cd4ec989e63f40a192a8b5b4d125a3362ef5897f1797d4931ab20a2a8",
     "registro": "2026148146",
     "titulo": "24/11/2026 | CNMV DIRECTIVOS | EBRO FOODS, S.A. | CORPORACIÓN ECONÓMICA DELTA, S.A. | COMPRA: 6.150 acciones | 17,7400 EUR | Operación: 23/11/2026 | XMAD | +2 operaciones",
